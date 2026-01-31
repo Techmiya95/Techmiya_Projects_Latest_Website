@@ -1,0 +1,1223 @@
+/* ===== TECHMIYA PROJECTS - ENHANCED STYLES ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   HERO SECTION - Full Width Banner
+   ============================================ */
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark Overlay for Text Readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.8) 0%,
+            rgba(17, 44, 102, 0.7) 50%,
+            rgba(30, 58, 95, 0.75) 100%);
+    z-index: 1;
+}
+
+/* Animated Gradient Overlay */
+.page1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse at 20% 30%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(121, 40, 202, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(255, 0, 128, 0.08) 0%, transparent 60%);
+    animation: heroGradientMove 15s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes heroGradientMove {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(2deg);
+        opacity: 0.8;
+    }
+}
+
+/* Floating Particles Effect */
+.page1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(0, 212, 255, 0.5) 50%, transparent 50%),
+        radial-gradient(2px 2px at 40% 70%, rgba(121, 40, 202, 0.4) 50%, transparent 50%),
+        radial-gradient(2px 2px at 60% 20%, rgba(255, 255, 255, 0.3) 50%, transparent 50%),
+        radial-gradient(2px 2px at 80% 60%, rgba(0, 212, 255, 0.4) 50%, transparent 50%),
+        radial-gradient(3px 3px at 10% 80%, rgba(255, 0, 128, 0.3) 50%, transparent 50%),
+        radial-gradient(2px 2px at 90% 10%, rgba(121, 40, 202, 0.5) 50%, transparent 50%),
+        radial-gradient(2px 2px at 30% 50%, rgba(255, 255, 255, 0.2) 50%, transparent 50%),
+        radial-gradient(3px 3px at 70% 40%, rgba(0, 212, 255, 0.3) 50%, transparent 50%);
+    background-size: 100% 100%;
+    animation: particleFloat 25s linear infinite;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    25% {
+        transform: translateY(-20px) translateX(10px);
+    }
+
+    50% {
+        transform: translateY(-10px) translateX(-10px);
+    }
+
+    75% {
+        transform: translateY(-30px) translateX(5px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Text Box Enhanced - Centered Overlay */
+.text-box {
+    width: 90%;
+    max-width: 900px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 40px;
+}
+
+.text-box h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 50%, #7928ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleGlow 3s ease-in-out infinite;
+    text-shadow: 0 0 60px rgba(0, 212, 255, 0.3);
+}
+
+@keyframes titleGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 40px rgba(121, 40, 202, 0.4));
+    }
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(0, 212, 255, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(0, 212, 255, 0.25);
+}
+
+.text-box p {
+    font-family: 'Inter', sans-serif;
+    margin: 20px 0 40px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-box a {
+    text-decoration: none;
+}
+
+.text-box button {
+    background: linear-gradient(135deg, #00d4ff 0%, #7928ca 100%);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+.text-box button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.text-box button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(121, 40, 202, 0.4);
+}
+
+.text-box button:hover::before {
+    left: 100%;
+}
+
+/* Hero Btn */
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid rgba(0, 212, 255, 0.5);
+    padding: 14px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgba(0, 212, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.hero-btn:hover {
+    border-color: #00d4ff;
+    background: rgba(0, 212, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   NAVIGATION STYLES
+   ============================================ */
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 122%;
+    background: #101011;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background: #485777;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a img {
+    width: 100px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #00d4ff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* ============================================
+   FEATURE SECTION - Glassmorphism Cards
+   ============================================ */
+#feature {
+    width: 100%;
+    padding: 100px 0;
+    background: linear-gradient(180deg, #0a192f 0%, #112c66 50%, #0a192f 100%);
+    position: relative;
+}
+
+#feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse at 30% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(121, 40, 202, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.welcome {
+    text-align: center;
+    padding-bottom: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome p {
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #00d4ff;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 30px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.welcome p::after {
+    display: none;
+}
+
+.welcome h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.service-box {
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.single-service {
+    flex: 0 0 calc(33.333% - 30px);
+    max-width: 400px;
+    min-width: 300px;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.single-service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(121, 40, 202, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.single-service:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(0, 212, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.single-service:hover::before {
+    opacity: 1;
+}
+
+.single-service img {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+.single-service:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 25, 47, 0.8) 60%, rgba(10, 25, 47, 0.95) 100%);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.single-service:hover .overlay {
+    opacity: 1;
+}
+
+.service-desc {
+    width: 85%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+    transition: all 0.5s;
+    z-index: 3;
+}
+
+.service-desc h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+hr {
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.single-service:hover .service-desc {
+    bottom: 25%;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================
+   FINAL YEAR PROJECT SECTION
+   ============================================ */
+.final {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+.final h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #0a192f 0%, #112c66 50%, #1e3a5f 100%);
+    color: white;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    transition: all 0.4s ease;
+}
+
+.final h1::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #00d4ff, #7928ca, #ff0080);
+    border-radius: 17px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.final h1:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(0, 212, 255, 0.2);
+}
+
+.final h1:hover::before {
+    opacity: 1;
+}
+
+.row {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.final-year {
+    display: flex;
+    width: 400%;
+    animation: slide1 20s ease-in-out infinite;
+}
+
+.slide1 {
+    width: 100%;
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.slide1 img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    max-height: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s;
+}
+
+.slide1 img:hover {
+    transform: scale(1.02);
+}
+
+@keyframes slide1 {
+
+    0%,
+    22% {
+        transform: translateX(0);
+    }
+
+    25%,
+    47% {
+        transform: translateX(-100%);
+    }
+
+    50%,
+    72% {
+        transform: translateX(-200%);
+    }
+
+    75%,
+    97% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+/* ============================================
+   TESTIMONIALS SECTION - Enhanced
+   ============================================ */
+.testimonials {
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(180deg, #0a192f 0%, #050c18 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+}
+
+.testimonial-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonials h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 50px;
+    text-shadow: none;
+}
+
+.testimonial-slider {
+    display: flex;
+    position: relative;
+    width: calc(11 * 2 * 50vw);
+    justify-content: center;
+    animation: slide 80s linear infinite;
+}
+
+.testimonial-col {
+    min-width: 400px;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 0 20px;
+    transition: all 0.5s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-col:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(0, 212, 255, 0.1);
+}
+
+.testimonial-col img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid transparent;
+    background: linear-gradient(#0a192f, #0a192f) padding-box,
+        linear-gradient(135deg, #00d4ff, #7928ca) border-box;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.testimonial-col div {
+    text-align: center;
+}
+
+.testimonial-col p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-col h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.testimonial-col i {
+    color: #fbbf24;
+    font-size: 18px;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-11 * 50vw));
+    }
+}
+
+/* ============================================
+   FAQ SECTION - Dark Glassmorphism
+   ============================================ */
+.faq {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 50px 40px;
+    background: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(0, 212, 255, 0.05);
+    position: relative;
+}
+
+.faq::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    border-radius: 2px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.faq h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 25px 0 12px;
+    padding: 15px 20px;
+    background: rgba(0, 212, 255, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #00d4ff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.faq h3:hover {
+    background: rgba(0, 212, 255, 0.1);
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.1);
+}
+
+.faq p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    padding-left: 24px;
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   INTERNSHIP FEEDBACK SECTION
+   ============================================ */
+.internship-feedback {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 50px;
+    text-align: center;
+    background: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(0, 212, 255, 0.05);
+    position: relative;
+}
+
+.internship-feedback::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 30%;
+    right: 30%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7928ca, transparent);
+    border-radius: 2px;
+}
+
+.internship-feedback h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #7928ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.internship-feedback p {
+    font-family: 'Inter', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.internship-feedback .feedback-qr {
+    width: 180px;
+    height: 180px;
+    margin: 25px auto;
+    display: block;
+    border-radius: 15px;
+    padding: 10px;
+    background: #fff;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(121, 40, 202, 0.2);
+}
+
+.internship-feedback .feedback-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #7928ca 0%, #ff0080 100%);
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(121, 40, 202, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.internship-feedback .feedback-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.internship-feedback .feedback-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(121, 40, 202, 0.4);
+}
+
+.internship-feedback .feedback-btn:hover::before {
+    left: 100%;
+}
+
+/* ============================================
+   FLOATING SOCIAL BUTTONS
+   ============================================ */
+.whatsapp-container {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    z-index: 1000;
+}
+
+.instagram-container {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: 1000;
+}
+
+.linkedin-container {
+    position: fixed;
+    right: 20px;
+    bottom: 170px;
+    z-index: 1000;
+}
+
+.youtube-container {
+    position: fixed;
+    right: 20px;
+    bottom: 240px;
+    z-index: 1000;
+}
+
+.whatsapp-button,
+.instagram-button,
+.linkedin-button,
+.youtube-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover,
+.instagram-button:hover,
+.linkedin-button:hover,
+.youtube-button:hover {
+    transform: scale(1.15);
+}
+
+.whatsapp-button img,
+.instagram-button img,
+.linkedin-button img,
+.youtube-button img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+    .text-box {
+        padding: 20px;
+        margin-top: 80px;
+    }
+
+    .text-box h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-box p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .text-box button {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+
+    .hero-btn {
+        font-size: 12px;
+        padding: 10px 25px;
+    }
+
+    /* Feature Cards */
+    .single-service {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .services-grid {
+        padding: 0 15px;
+    }
+
+    /* Final Year Projects */
+    .final {
+        width: 95%;
+        padding: 40px 0;
+        margin: 30px auto;
+    }
+
+    .final h1 {
+        font-size: 1.4rem;
+        padding: 12px 20px;
+    }
+
+    .row {
+        height: 350px;
+    }
+
+    /* FAQ Section */
+    .faq {
+        margin: 40px 15px;
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .faq h2 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    .faq h3 {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+
+    .faq p {
+        font-size: 0.9rem;
+        padding-left: 15px;
+    }
+
+    /* Internship Feedback */
+    .internship-feedback {
+        margin: 40px 15px;
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .internship-feedback h2 {
+        font-size: 1.3rem;
+    }
+
+    .internship-feedback p {
+        font-size: 0.9rem;
+    }
+
+    .internship-feedback #qrimg {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+        padding: 50px 15px;
+    }
+
+    .testimonials h1 {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-col {
+        min-width: 85vw;
+        margin: 0 10px;
+        padding: 25px 20px;
+    }
+
+    /* Floating Social Buttons */
+    .whatsapp-container,
+    .instagram-container,
+    .linkedin-container,
+    .youtube-container {
+        right: 12px;
+    }
+
+    .whatsapp-container {
+        bottom: 20px;
+    }
+
+    .instagram-container {
+        bottom: 85px;
+    }
+
+    .linkedin-container {
+        bottom: 150px;
+    }
+
+    .youtube-container {
+        bottom: 215px;
+    }
+
+    .whatsapp-button,
+    .instagram-button,
+    .linkedin-button,
+    .youtube-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-button img,
+    .instagram-button img,
+    .linkedin-button img,
+    .youtube-button img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-box {
+        padding: 15px;
+        margin-top: 70px;
+    }
+
+    .text-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-box p {
+        font-size: 0.85rem;
+    }
+
+    .testimonials {
+        padding: 40px 10px;
+    }
+
+    .testimonials h1 {
+        font-size: 1.3rem;
+    }
+
+    .testimonial-col {
+        min-width: 90vw;
+        padding: 20px 15px;
+    }
+
+    .final {
+        width: 98%;
+    }
+
+    .final h1 {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    .faq {
+        margin: 30px 10px;
+        padding: 25px 15px;
+    }
+
+    .internship-feedback {
+        margin: 30px 10px;
+        padding: 25px 15px;
+    }
+
+    /* Smaller social buttons on very small screens */
+    .whatsapp-button,
+    .instagram-button,
+    .linkedin-button,
+    .youtube-button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .whatsapp-button img,
+    .instagram-button img,
+    .linkedin-button img,
+    .youtube-button img {
+        width: 24px;
+        height: 24px;
+    }
+}

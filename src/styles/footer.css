@@ -1,0 +1,368 @@
+/* Gen Z Aesthetic Footer Styling */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+footer {
+  background: radial-gradient(circle at top right, rgba(0, 212, 255, 0.05), transparent),
+    linear-gradient(180deg, #0a192f 0%, #050c18 100%);
+  padding: 60px 0 30px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border-top: 1px solid rgba(0, 212, 255, 0.1);
+  width: 100%;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+}
+
+.footercontainer {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+footer .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+
+footer .col {
+  flex: 1;
+  min-width: 280px;
+}
+
+footer h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer h3::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: #00d4ff;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.footer-content p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Footer Navigation Links */
+.footernav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footernav ul li {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footernav ul li a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 0;
+}
+
+.footernav ul li a:hover {
+  color: #00d4ff;
+  transform: translateX(5px);
+}
+
+/* Branded Social Icons */
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.socialIcons a {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.socialIcons a:hover {
+  background: #00d4ff;
+  border-color: #00d4ff;
+  color: #0a192f;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+/* Center Logo Section */
+.slogan {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.slogan img {
+  max-width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.slogan:hover img {
+  transform: scale(1.05);
+}
+
+/* Payment Icons */
+.payments {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  flex-wrap: wrap;
+}
+
+.payments:hover {
+  opacity: 1;
+}
+
+.payments img {
+  height: 22px;
+  width: auto;
+  filter: grayscale(1) invert(1) brightness(2);
+  transition: all 0.3s ease;
+}
+
+.payments a:hover img {
+  filter: none;
+  transform: scale(1.1);
+}
+
+/* Address Styling */
+.add {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.add p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.add p strong {
+  color: #00d4ff;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Footer Bottom Bar */
+.footerBottom {
+  background: #050c18;
+  padding: 20px 15px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  width: 100%;
+}
+
+.footerBottom p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.designer {
+  color: #00d4ff;
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE - Tablet ===== */
+@media (max-width: 992px) {
+  footer {
+    padding: 50px 0 25px;
+  }
+
+  .footercontainer {
+    padding: 0 15px;
+  }
+
+  footer .row {
+    gap: 30px;
+  }
+
+  footer .col {
+    min-width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  footer h3 {
+    justify-content: center;
+  }
+
+  footer h3::before {
+    display: none;
+  }
+
+  .footer-content,
+  .footernav {
+    text-align: center;
+  }
+
+  .footernav ul {
+    align-items: center;
+  }
+
+  .footernav ul li a:hover {
+    transform: none;
+  }
+
+  .add {
+    max-width: 350px;
+    margin: 25px auto 0;
+  }
+}
+
+/* ===== RESPONSIVE - Mobile ===== */
+@media (max-width: 576px) {
+  footer {
+    padding: 40px 0 20px;
+  }
+
+  .footercontainer {
+    padding: 0 15px;
+  }
+
+  footer .row {
+    gap: 25px;
+    flex-direction: column;
+  }
+
+  footer .col {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  footer h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+
+  .footer-content p {
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .footernav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footernav ul li {
+    display: block;
+    text-align: center;
+    width: auto;
+  }
+
+  .footernav ul li a {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .socialIcons {
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .socialIcons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .payments {
+    gap: 12px;
+    margin: 15px 0;
+  }
+
+  .payments img {
+    height: 18px;
+  }
+
+  .slogan img {
+    max-width: 120px;
+  }
+
+  .add {
+    padding: 15px;
+    margin: 20px 15px 0;
+    max-width: none;
+  }
+
+  .add p {
+    font-size: 0.8rem;
+  }
+
+  .footerBottom {
+    padding: 15px 10px;
+  }
+
+  .footerBottom p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}

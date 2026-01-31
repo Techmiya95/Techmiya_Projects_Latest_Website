@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #0d47a1;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.instructions {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 8px;
+}
+
+.instructions h3 {
+    color: #0d47a1;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 30s infinite;
+}
+
+.slides img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.download-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #1565c0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.download-btn:hover {
+    background: #0d47a1;
+    transform: scale(1.05);
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register a {
+    text-decoration: none;
+    color: white;
+    background: #0d47a1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.register a:hover {
+    background: #1565c0;
+}
