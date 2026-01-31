@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
 // Import global styles
+import './index.css'
 import './styles/style.css'
 import './styles/header.css'
 import './styles/footer.css'
