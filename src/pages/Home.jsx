@@ -1,4 +1,5 @@
 import TestimonialSlider from '../components/TestimonialSlider';
+import YoutubeShortsSlider from '../components/YoutubeShortsSlider';
 
 function Home() {
     return (
@@ -7,12 +8,53 @@ function Home() {
             <section className="page1" style={{ backgroundImage: "url('/images/collage.png')" }}>
                 <div className="hero-overlay"></div>
                 <div className="text-box">
+                    <p className="hero-keywords"><strong>Expert Guidance for Final Year Projects, IEEE Projects, and Project for Students.</strong></p>
                     <h1>Techmiya Projects</h1>
-                    <p>Our mission is to provide a platform where creativity meets technology.</p>
+                    <p>Empowering the next generation of innovators where boundless creativity converges with cutting-edge technology.</p>
                 </div>
             </section>
 
-            {/* Welcome to Techmiya */}
+            {/* Final Year Projects */}
+            <section className="final">
+                <h2>Final Year Project</h2>
+                <div className="row">
+                    <div className="final-year" id="final-year">
+                        <div className="slide1">
+                            <img src="/images/softwareprojects.png" alt="Software Projects" />
+                        </div>
+                        <div className="slide1">
+                            <img src="/images/electronicsprojects.png" alt="Electronics Projects" />
+                        </div>
+                        <div className="slide1">
+                            <img src="/images/IT.png" alt="IT Projects" />
+                        </div>
+                        <div className="slide1">
+                            <img src="/images/collage.png" alt="College Projects" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Testimonials */}
+            <TestimonialSlider />
+
+            {/* YouTube Shorts */}
+            <YoutubeShortsSlider />
+
+            {/* FAQ Section */}
+            <section className="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div>
+                    <h3>Do you provide final year project guidance?</h3>
+                    <p>Yes, we provide full project development, documentation, and demo support.</p>
+                    <h3>Can students register online for projects?</h3>
+                    <p>Yes, students can register for project expo, games, and final year projects online.</p>
+                    <h3>Do you offer IEEE and real-world projects?</h3>
+                    <p>Yes, we provide IEEE + real-world industry projects for all branches.</p>
+                </div>
+            </section>
+
+            {/* Welcome to Techmiya - Moved down */}
             <section id="feature">
                 <div className="welcome">
                     <p>WELCOME TO TECHMIYA</p>
@@ -67,43 +109,6 @@ function Home() {
                             <hr />
                         </div>
                     </div>
-                </div>
-            </section>
-
-            {/* Final Year Projects */}
-            <section className="final">
-                <h2>Final Year Project</h2>
-                <div className="row">
-                    <div className="final-year" id="final-year">
-                        <div className="slide1">
-                            <img src="/images/softwareprojects.png" alt="Software Projects" />
-                        </div>
-                        <div className="slide1">
-                            <img src="/images/electronicsprojects.png" alt="Electronics Projects" />
-                        </div>
-                        <div className="slide1">
-                            <img src="/images/IT.png" alt="IT Projects" />
-                        </div>
-                        <div className="slide1">
-                            <img src="/images/collage.png" alt="College Projects" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Testimonials */}
-            <TestimonialSlider />
-
-            {/* FAQ Section */}
-            <section className="faq">
-                <h2>Frequently Asked Questions</h2>
-                <div>
-                    <h3>Do you provide final year project guidance?</h3>
-                    <p>Yes, we provide full project development, documentation, and demo support.</p>
-                    <h3>Can students register online for projects?</h3>
-                    <p>Yes, students can register for project expo, games, and final year projects online.</p>
-                    <h3>Do you offer IEEE and real-world projects?</h3>
-                    <p>Yes, we provide IEEE + real-world industry projects for all branches.</p>
                 </div>
             </section>
 

@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import ProjectExpo from './pages/ProjectExpo';
+import ProjectDetail from './pages/ProjectDetail';
 import Game from './pages/Game';
 
 // Software Projects
@@ -54,6 +55,7 @@ function App() {
           <Route path="about-us" element={<AboutUs />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="projectexpo" element={<ProjectExpo />} />
+          <Route path="project/:projectId" element={<ProjectDetail />} />
           <Route path="game" element={<Game />} />
 
           {/* Software Projects */}
