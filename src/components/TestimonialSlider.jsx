@@ -1,3 +1,5 @@
+import { useState, useEffect, useRef } from 'react';
+
 const testimonials = [
     { name: 'Vajra', review: 'I have tried many tools, but this one stands out.', rating: 4, image: '/images/user1.jpeg' },
     { name: 'Hamsa Lekha R', review: 'The software provided by Techmiya Solutions has been a game-changer for us.', rating: 5, image: '/images/user2.jpeg' },
@@ -33,12 +35,46 @@ function StarRating({ rating }) {
 function TestimonialSlider() {
     // Duplicate testimonials for infinite scroll effect
     const allTestimonials = [...testimonials, ...testimonials];
+    const [isAnimating, setIsAnimating] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        let timeoutId;
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !isAnimating) {
+                        // Start animation after a short delay
+                        timeoutId = setTimeout(() => {
+                            setIsAnimating(true);
+                        }, 800); // 0.8 second delay
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Trigger earlier
+            }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+        };
+    }, [isAnimating]);
 
     return (
-        <section className="testimonials">
+        <section className="testimonials" ref={sectionRef}>
             <div className="testimonial-container">
-                <h1>Hear From Our Customers</h1>
-                <div className="testimonial-slider">
+                <h2>Hear From Our Customers</h2>
+                <div className={`testimonial-slider ${isAnimating ? 'animate' : ''}`}>
                     {allTestimonials.map((testimonial, index) => (
                         <div key={index} className="testimonial-col">
                             <img loading="lazy" src={testimonial.image} alt="Techmiya review" />

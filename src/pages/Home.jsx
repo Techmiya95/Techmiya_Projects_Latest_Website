@@ -72,7 +72,7 @@ function Home() {
 
             {/* Final Year Projects */}
             <section className="final">
-                <h1>Final Year Project</h1>
+                <h2>Final Year Project</h2>
                 <div className="row">
                     <div className="final-year" id="final-year">
                         <div className="slide1">

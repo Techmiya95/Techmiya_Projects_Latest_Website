@@ -693,9 +693,14 @@ hr {
 .testimonial-slider {
     display: flex;
     position: relative;
-    width: calc(11 * 2 * 50vw);
-    justify-content: center;
-    animation: slide 80s linear infinite;
+    width: max-content;
+    /* Animation is paused by default */
+    animation: slide 40s linear infinite;
+    animation-play-state: paused;
+}
+
+.testimonial-slider.animate {
+    animation-play-state: running;
 }
 
 .testimonial-col {

@@ -82,7 +82,7 @@ function ContactUs() {
 
             <div className="contact-info">
                 <div className="contact-details">
-                    <h1>Contact Details</h1>
+                    <h2>Contact Details</h2>
                     <p><strong>Phone:</strong> +91 6363760275</p>
                     <h2>Address</h2>
                     <p>#1400, 2nd Floor</p>
