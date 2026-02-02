@@ -1,0 +1,15 @@
+# Techmiya Projects
+
+Techmiya Projects specializes in final year engineering projects, software development, and R&D solutions.
+
+## Main Sections
+- [Home](https://www.techmiyaprojects.com/)
+- [About Us](https://www.techmiyaprojects.com/about-us)
+- [Contact Us](https://www.techmiyaprojects.com/contact-us)
+- [Project Expo](https://www.techmiyaprojects.com/project-expo)
+
+## Core Offerings
+- Final Year Projects (IEEE & Real-world)
+- Software Development (Python, Java, Machine Learning, AI)
+- Electronics Projects (IoT, Embedded Systems)
+- Industrial Mentorship & Certification
