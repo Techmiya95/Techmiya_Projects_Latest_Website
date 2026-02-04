@@ -22,6 +22,7 @@ import DeepLearningProjects from './pages/software/DeepLearningProjects';
 import CloudComputingProjects from './pages/software/CloudComputingProjects';
 import NetworkProjects from './pages/software/NetworkProjects';
 import BlockchainProjects from './pages/software/BlockchainProjects';
+import LatestProjectIdeas from './pages/software/LatestProjectIdeas';
 
 // Electronic Projects
 import IoTProjects from './pages/electronic/IoTProjects';
@@ -69,6 +70,7 @@ function App() {
           <Route path="software-projects/cloud-computing" element={<CloudComputingProjects />} />
           <Route path="software-projects/network" element={<NetworkProjects />} />
           <Route path="software-projects/blockchain" element={<BlockchainProjects />} />
+          <Route path="software-projects/latest-ideas-2025" element={<LatestProjectIdeas />} />
 
           {/* Electronic Projects */}
           <Route path="electronic-projects/iot" element={<IoTProjects />} />

@@ -1,6 +1,7 @@
 import TestimonialSlider from '../components/TestimonialSlider';
 import YoutubeShortsSlider from '../components/YoutubeShortsSlider';
 
+
 function Home() {
     return (
         <>
@@ -34,6 +35,107 @@ function Home() {
                     </div>
                 </div>
             </section>
+
+
+            {/* Latest Projects CTA Section */}
+            <section className="latest-cta">
+                <div className="cta-container">
+                    <div className="cta-content">
+                        <span className="badge">New for 2025</span>
+                        <h2>100+ Latest Project Ideas</h2>
+                        <p>Stay ahead with our curated list of 2025's most innovative project topics in AI, LLM, RAG, Blockchain, and Edge AI.</p>
+                        <div className="cta-features">
+                            <div className="feat"><i className="fa fa-check-circle"></i> Categorized by Tech</div>
+                            <div className="feat"><i className="fa fa-check-circle"></i> Industry Relevant</div>
+                            <div className="feat"><i className="fa fa-check-circle"></i> Research Oriented</div>
+                        </div>
+                        <a href="/software-projects/latest-ideas-2025" className="cta-main-btn">
+                            View All Project Ideas <i className="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .latest-cta {
+                    padding: 80px 20px;
+                    background: linear-gradient(135deg, #112c66 0%, #061129 100%);
+                    color: white;
+                    text-align: center;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .cta-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    position: relative;
+                    z-index: 2;
+                }
+                .latest-cta::after {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    right: -10%;
+                    width: 500px;
+                    height: 500px;
+                    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+                    border-radius: 50%;
+                }
+                .badge {
+                    background: #00d4ff;
+                    color: #112c66;
+                    padding: 5px 15px;
+                    border-radius: 20px;
+                    font-weight: 700;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .cta-content h2 {
+                    font-size: clamp(2rem, 5vw, 3.5rem) !important;
+                    margin-bottom: 20px;
+                    color: white !important;
+                }
+                .cta-content p {
+                    font-size: 1.2rem;
+                    color: rgba(255,255,255,0.8);
+                    max-width: 700px;
+                    margin: 0 auto 40px;
+                }
+                .cta-features {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    margin-bottom: 50px;
+                    flex-wrap: wrap;
+                }
+                .feat {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 500;
+                    color: #00d4ff;
+                }
+                .cta-main-btn {
+                    display: inline-block;
+                    padding: 18px 40px;
+                    background: white;
+                    color: #112c66 !important;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+                }
+                .cta-main-btn:hover {
+                    background: #00d4ff;
+                    transform: translateY(-5px);
+                    box-shadow: 0 15px 30px rgba(0, 212, 255, 0.3);
+                }
+            `}} />
 
             {/* Testimonials */}
             <TestimonialSlider />
