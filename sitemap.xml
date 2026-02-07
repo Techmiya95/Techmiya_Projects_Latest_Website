@@ -1,23 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://www.techmiyaprojects.com/</loc>
-    <lastmod>2026-02-02</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.techmiyaprojects.com/about-us</loc>
-    <lastmod>2026-02-02</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.techmiyaprojects.com/contact-us</loc>
-    <lastmod>2026-02-02</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.techmiyaprojects.com/project-expo</loc>
-    <lastmod>2026-02-02</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Software Projects -->
+  <url>
+    <loc>https://www.techmiyaprojects.com/software-projects/python</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.techmiyaprojects.com/software-projects/machine-learning</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.techmiyaprojects.com/software-projects/ai</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.techmiyaprojects.com/software-projects/data-science</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.techmiyaprojects.com/software-projects/latest-ideas-2026</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Electronic Projects -->
+  <url>
+    <loc>https://www.techmiyaprojects.com/electronic-projects/iot</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.techmiyaprojects.com/electronic-projects/arduino</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.techmiyaprojects.com/electronic-projects/raspberrypi</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.techmiyaprojects.com/electronic-projects/drones</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Domains -->
+  <url>
+    <loc>https://www.techmiyaprojects.com/domains/embedded-systems</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.techmiyaprojects.com/domains/ai-ml</loc>
+    <lastmod>2026-02-07</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
