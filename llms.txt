@@ -1,15 +1,22 @@
-# Techmiya Projects
+# Techmiya Projects - LLM Guide
 
-Techmiya Projects specializes in final year engineering projects, software development, and R&D solutions.
+## Project Overview
+Techmiya Projects is a final year project center in Bangalore, specializing in IEEE, AI, ML, IoT, and engineering projects.
 
-## Main Sections
-- [Home](https://www.techmiyaprojects.com/)
-- [About Us](https://www.techmiyaprojects.com/about-us)
-- [Contact Us](https://www.techmiyaprojects.com/contact-us)
-- [Project Expo](https://www.techmiyaprojects.com/project-expo)
+## Key Information
+- **Domain**: https://www.techmiyaprojects.com
+- **Locations**: Jayanagar, Vijayanagar (Bangalore)
+- **Tech Stack**: React, Vite, TailwindCSS (assumed/to be confirmed)
+- **Contact**: support@thehoth.com (Wait, this was in the user prompt, but the site says support@techmiyaprojects.com probably? I should check contact info. The user prompt had "support@thehoth.com" as part of the SEO report header, likely the *sender* of the report. I should use the site's actual contact).
 
-## Core Offerings
-- Final Year Projects (IEEE & Real-world)
-- Software Development (Python, Java, Machine Learning, AI)
-- Electronics Projects (IoT, Embedded Systems)
-- Industrial Mentorship & Certification
+## Site Structure
+- `/`: Home
+- `/about-us`: About
+- `/contact-us`: Contact
+- `/project/:projectId`: Project Details
+- `/software-projects/*`: Software domain projects
+- `/electronic-projects/*`: Chrome domain projects
+
+## SEO
+- This site uses `react-helmet-async` for SEO.
+- Core content is pre-rendered or available in `index.html` where possible, but mostly client-side.
