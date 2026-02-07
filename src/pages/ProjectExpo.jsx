@@ -5,8 +5,8 @@ function ProjectExpo() {
         <>
             <br /><br /><br /><br /><br /><br />
             <div className="container">
-                <h1>All India Hackathon 2025</h1>
-                <p>Get ready to showcase your innovation, creativity, and problem-solving skills in the All India Hackathon 2025, hosted by Techmiya Solutions in collaboration with Dayananda Sagar College of Engineering, Kumaraswamy Layout, Bengaluru. This event brings together the brightest minds from across the country to collaborate, compete, and create ground-breaking solutions.</p>
+                <h1>All India Hackathon 2026</h1>
+                <p>Get ready to showcase your innovation, creativity, and problem-solving skills in the All India Hackathon 2026, hosted by Techmiya Solutions in collaboration with Dayananda Sagar College of Engineering, Kumaraswamy Layout, Bengaluru. This event brings together the brightest minds from across the country to collaborate, compete, and create ground-breaking solutions.</p>
 
                 <div className="slider">
                     <div className="slides">
@@ -30,7 +30,7 @@ function ProjectExpo() {
                         <i className="fa fa-download"></i> Download Sample PPT
                     </a>
                     <br /><br />
-                    <p><strong>Last Date for Registration:</strong> March 15th, 2025</p>
+                    <p><strong>Last Date for Registration:</strong> March 15th, 2026</p>
                 </div>
 
                 <div className="register">

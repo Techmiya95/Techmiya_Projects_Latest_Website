@@ -15,9 +15,16 @@ const rpiProjects = [
     { id: "rpi-10", title: "RPI - 10: Retro Gaming Console (RetroPie) using Raspberry Pi" }
 ];
 
+import SEO from '../../components/common/SEO';
+
 function RaspberryPiProjects() {
     return (
         <>
+            <SEO
+                title="Raspberry Pi Projects for Engineering Students | IoT & Embedded"
+                description="Discover innovative Raspberry Pi projects including Smart Home Hubs, NAS, Weather Stations, and AI-based applications for final year students."
+                keywords="Raspberry Pi projects, IoT projects, embedded systems, smart home, automation"
+            />
             <br /><br /><br /><br /><br />
             <div className="container">
                 <div className="main-content">

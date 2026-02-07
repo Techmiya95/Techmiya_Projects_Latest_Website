@@ -32,7 +32,7 @@ function Game() {
             </div>
 
             <footer>
-                &copy; 2025 Techmiya Games. All rights reserved.
+                &copy; 2026 Techmiya Games. All rights reserved.
             </footer>
         </div>
     );

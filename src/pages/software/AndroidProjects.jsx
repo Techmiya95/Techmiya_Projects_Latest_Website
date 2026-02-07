@@ -15,9 +15,16 @@ const androidProjects = [
     { id: "ad-10", title: "AD - 10: Language Learning App with Flashcards" }
 ];
 
+import SEO from '../../components/common/SEO';
+
 function AndroidProjects() {
     return (
         <>
+            <SEO
+                title="Android App Development Projects for Students 2026"
+                description="Best Android Studio projects for final year students. Build Food Delivery, E-commerce, and Health Monitor apps with source code."
+                keywords="Android projects, mobile app development, Java projects, Kotlin, final year projects"
+            />
             <br /><br /><br /><br /><br />
             <div className="container">
                 <div className="main-content">

@@ -127,5 +127,50 @@ export const latestProjectsData = [
             "AI-based Insider Threat Detection in Academic Labs",
             "Autonomous AI System for Project Lifecycle Optimization"
         ]
+    },
+    {
+        category: "Cybersecurity & Forensic Intelligence",
+        projects: [
+            "AI-based Zero Trust Network Access (ZTNA) Framework",
+            "Deepfake Detection and Mitigation System for Media Integrity",
+            "Blockchain-powered Secure Voting System with Biometric Auth",
+            "IoT Malware Detection using Behavioral Analytics",
+            "Automated Phishing Site Detection using Machine Learning",
+            "Secure Cloud Storage with Searchable Encryption",
+            "Privacy-Preserving Data Sharing for Healthcare using AI",
+            "Intelligent Intrusion Detection for Industrial IoT",
+            "Social Media Threat Monitoring and Analysis Platform",
+            "Automated Digital Forensic Evidence Collection Tool"
+        ]
+    },
+    {
+        category: "Cloud Computing & DevOps Automation",
+        projects: [
+            "Serverless Architecture for Ultra-Scalable Web Apps",
+            "Automated CI/CD Pipeline with AI-based Code Security",
+            "Cloud-native Microservices Monitoring and Tracing",
+            "Distributed File System with Self-Healing Capabilities",
+            "AI-driven Infrastructure as Code (IaC) Optimization",
+            "Multi-cloud Cost Optimization and Governance Engine",
+            "Container Security Auditing and Compliance Platform",
+            "Cloud-Edge Collaborative Resource Management System",
+            "High-Availability Database Cluster Orchestration",
+            "Automated Disaster Recovery for Hybrid Cloud"
+        ]
+    },
+    {
+        category: "Data Science & Big Data Analytics",
+        projects: [
+            "Real-time Sentiment Analysis on Global News Streams",
+            "Predictive Maintenance System for Smart Factories",
+            "Financial Fraud Detection using Graph Neural Networks",
+            "Personalized E-commerce Recommendation Engine (Gen 3)",
+            "Dynamic Supply Chain Optimization using Big Data",
+            "Customer Churn Prediction with Explainable AI (XAI)",
+            "Large-scale Traffic Flow Prediction for Smart Cities",
+            "Social Media Trend Forecasting using Topic Modeling",
+            "Real-time Data Visualization Dashboard for IoT Networks",
+            "Advanced Genomic Data Analysis for Personalized Medicine"
+        ]
     }
 ];

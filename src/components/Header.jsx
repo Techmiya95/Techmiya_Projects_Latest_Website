@@ -74,7 +74,7 @@ function Header() {
                 <li><Link to="/domains/ai-ml">AI and ML</Link></li>
               </ul>
             </li>
-            <li className="latest-link"><Link to="/software-projects/latest-ideas-2025">LATEST PROJECTS 2025</Link></li>
+            <li className="latest-link"><Link to="/software-projects/latest-ideas-2026">LATEST PROJECTS 2026</Link></li>
             <li><Link to="/about-us">ABOUT US</Link></li>
             <li><Link to="/contact-us">CONTACT US</Link></li>
           </ul>

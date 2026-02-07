@@ -41,15 +41,15 @@ function Home() {
             <section className="latest-cta">
                 <div className="cta-container">
                     <div className="cta-content">
-                        <span className="badge">New for 2025</span>
+                        <span className="badge">New for 2026</span>
                         <h2>100+ Latest Project Ideas</h2>
-                        <p>Stay ahead with our curated list of 2025's most innovative project topics in AI, LLM, RAG, Blockchain, and Edge AI.</p>
+                        <p>Stay ahead with our curated list of 2026's most innovative project topics in AI, LLM, RAG, Blockchain, and Edge AI.</p>
                         <div className="cta-features">
                             <div className="feat"><i className="fa fa-check-circle"></i> Categorized by Tech</div>
                             <div className="feat"><i className="fa fa-check-circle"></i> Industry Relevant</div>
                             <div className="feat"><i className="fa fa-check-circle"></i> Research Oriented</div>
                         </div>
-                        <a href="/software-projects/latest-ideas-2025" className="cta-main-btn">
+                        <a href="/software-projects/latest-ideas-2026" className="cta-main-btn">
                             View All Project Ideas <i className="fa fa-arrow-right"></i>
                         </a>
                     </div>

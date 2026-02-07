@@ -22,3 +22,17 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Large files
+*.exe
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.pdf
+# Large files
+*.exe
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.pdf

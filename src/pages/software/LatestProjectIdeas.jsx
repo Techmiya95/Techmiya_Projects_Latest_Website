@@ -1,6 +1,6 @@
-import React from 'react';
 import Sidebar from '../../components/Sidebar';
 import { latestProjectsData } from '../../data/latestProjectsData';
+import { Link } from 'react-router-dom';
 import '../../styles/projects.css';
 
 function LatestProjectIdeas() {
@@ -11,25 +11,27 @@ function LatestProjectIdeas() {
                 <div className="main-content">
                     <div className="latest-header">
                         <h1>Latest Project Ideas 2025</h1>
-                        <p className="subtitle">Explore 100+ cutting-edge project topics for final year and research.</p>
+                        <p className="subtitle">Explore {latestProjectsData.reduce((acc, cat) => acc + cat.projects.length, 0)}+ cutting-edge project topics for final year and research in 2025.</p>
                     </div>
 
                     {latestProjectsData.map((section, idx) => (
                         <div key={idx} className="project-category-section">
                             <h2 className="category-title">{section.category}</h2>
                             <div className="projects-grid">
-                                {section.projects.map((project, pIdx) => (
-                                    <div key={pIdx} className="latest-project-card">
-                                        <div className="card-number">{(pIdx + 1).toString().padStart(2, '0')}</div>
-                                        <div className="card-content">
-                                            <h3>{project}</h3>
-                                            <div className="card-footer">
-                                                <span className="tag">2025 Edition</span>
-                                                <span className="tech-tag">{section.category.split(' ')[0]}</span>
+                                {section.projects.map((project, pIdx) => {
+                                    const projectId = `latest-${idx}-${pIdx}`;
+                                    return (
+                                        <Link key={pIdx} to={`/project/${projectId}`} className="latest-project-card">
+                                            <div className="card-number">{(pIdx + 1).toString().padStart(2, '0')}</div>
+                                            <div className="card-content">
+                                                <h3>{project}</h3>
+                                                <div className="card-footer">
+                                                    <span className="tag">2026 Edition</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                ))}
+                                        </Link>
+                                    );
+                                })}
                             </div>
                         </div>
                     ))}
@@ -78,6 +80,7 @@ function LatestProjectIdeas() {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    text-decoration: none;
                 }
                 .latest-project-card:hover {
                     transform: translateY(-5px);

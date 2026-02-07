@@ -48,9 +48,13 @@ function Footer() {
                             </div>
 
                             <div className="add">
-                                <p><strong>Techmiya Solutions</strong></p>
-                                <p>#1400, 2nd Floor, 28th main S & C Cross Rd</p>
-                                <p>Jayanagar 9th Block, Bengaluru</p>
+                                <address style={{ fontStyle: 'normal' }}>
+                                    <p><strong>Techmiya Solutions</strong></p>
+                                    <p>#1400, 2nd Floor, 28th main S & C Cross Rd</p>
+                                    <p>Jayanagar 9th Block, Bengaluru</p>
+                                    <p><i className="fa fa-phone"></i> +91 63637 60275</p>
+                                    <p><i className="fa fa-envelope"></i> support@techmiyaprojects.com</p>
+                                </address>
                             </div>
                         </div>
 

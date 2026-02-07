@@ -15,9 +15,16 @@ const gsmProjects = [
     { id: "gsm-10", title: "GSM - 10: GSM Based Industrial Machine Monitoring and Control" }
 ];
 
+import SEO from '../../components/common/SEO';
+
 function GSMProjects() {
     return (
         <>
+            <SEO
+                title="GSM Based Projects for Engineering Students"
+                description="Explore top GSM based projects for final year engineering. Includes home automation, vehicle tracking, and smart security systems with source code and guidance."
+                keywords="GSM projects, final year projects, engineering projects, vehicle tracking, home automation, electronics projects"
+            />
             <br /><br /><br /><br /><br />
             <div className="container">
                 <div className="main-content">
