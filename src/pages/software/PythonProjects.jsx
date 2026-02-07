@@ -1,5 +1,6 @@
 import Sidebar from '../../components/Sidebar';
 import ProjectItem from '../../components/ProjectItem';
+import SEO from '../../components/common/SEO';
 import '../../styles/projects.css';
 
 const pythonProjects = [
@@ -68,11 +69,14 @@ const pythonProjects = [
 function PythonProjects() {
     return (
         <>
-            <br /><br /><br /><br /><br />
+            <SEO
+                title="Python Projects for Final Year Students"
+                description="Browse our extensive list of Python-based final year projects including AI, Machine Learning, Data Science, and Web applications with full code and support."
+                keywords="python projects, final year python projects, AI projects python, machine learning projects, IEEE python projects"
+            />
             <div className="container">
                 <div className="main-content">
                     <h1>List of Python Projects</h1>
-                    <br /><br />
                     <ol>
                         {pythonProjects.map((project, index) => (
                             <ProjectItem key={index} id={project.id} title={project.title} />

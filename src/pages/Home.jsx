@@ -1,10 +1,16 @@
 import TestimonialSlider from '../components/TestimonialSlider';
 import YoutubeShortsSlider from '../components/YoutubeShortsSlider';
+import SEO from '../components/common/SEO';
 
 
 function Home() {
     return (
         <>
+            <SEO
+                title="Best Final Year Projects Center Bangalore | IEEE, AI, ML, IoT"
+                description="Techmiya Projects is Bangalore's leading project center for IEEE, AI, ML, IoT, and Engineering projects. Get expert guidance, documentation, and source code."
+                keywords="final year projects, IEEE projects bangalore, best project center, AI projects, ML projects, IoT projects, Techmiya"
+            />
             {/* Hero Section */}
             <section className="page1" style={{ backgroundImage: "url('/images/collage.png')" }}>
                 <div className="hero-overlay"></div>
@@ -164,7 +170,7 @@ function Home() {
                 </div>
                 <div className="service-box">
                     <div className="single-service">
-                        <img loading="lazy" src="/images/cutt.png" alt="Techmiya review" />
+                        <img loading="lazy" src="/images/cutt.png" alt="Cutting Edge Technologies at Techmiya" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Cutting Edge Technologies</h3>
@@ -172,7 +178,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/real.png" alt="Techmiya review" />
+                        <img loading="lazy" src="/images/real.png" alt="Real World Projects Experience" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Real World Projects</h3>
@@ -180,7 +186,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/collab.png" alt="Techmiya review" />
+                        <img loading="lazy" src="/images/collab.png" alt="Collaborative Learning Environment" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Collaborative Learning</h3>
@@ -188,7 +194,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/mentor.png" alt="Techmiya review" />
+                        <img loading="lazy" src="/images/mentor.png" alt="Industrial Mentorship for Students" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Industrial Mentorship</h3>
@@ -196,7 +202,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/creativity.png" alt="Techmiya review" />
+                        <img loading="lazy" src="/images/creativity.png" alt="Innovation and Creativity focus" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Innovation and Creativity</h3>
@@ -204,7 +210,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/Certification.png" alt="Techmiya review" />
+                        <img loading="lazy" src="/images/Certification.png" alt="Project Certification and Recognition" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Certification and Recognition</h3>

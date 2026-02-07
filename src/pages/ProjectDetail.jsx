@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { getProjectById } from '../data/projectsData';
 import Sidebar from '../components/Sidebar';
+import SEO from '../components/common/SEO';
 import '../styles/projects.css';
 
 function ProjectDetail() {
@@ -21,7 +22,13 @@ function ProjectDetail() {
 
     return (
         <div className="project-detail-wrapper">
-            <br /><br /><br /><br /><br />
+            <SEO
+                title={project.title}
+                description={project.intro?.substring(0, 160)}
+                keywords={`${project.title}, ${project.category}, engineering projects, final year projects`}
+                image={project.image}
+                type="article"
+            />
             <div className="container">
                 <div className="main-content project-detail-modern">
                     <div className="detail-hero">

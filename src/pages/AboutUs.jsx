@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/common/SEO';
 import '../styles/about.css';
 
 function AboutUs() {
     return (
         <div className="about-page">
+            <SEO
+                title="About Us"
+                description="Learn more about Techmiya Projects, our mission to empower students with innovative final year projects and industry-standard R&D solutions."
+            />
             <h1>About Us</h1>
 
             <p>Welcome to Techmiya Projects, your one-stop destination for innovative and cutting-edge final year engineering projects. At Techmiya Projects, we are passionate about fostering creativity, learning, and providing students with the tools they need to succeed in their academic endeavors.</p>

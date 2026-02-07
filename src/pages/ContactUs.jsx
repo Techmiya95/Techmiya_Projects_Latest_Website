@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SEO from '../components/common/SEO';
 import '../styles/contact.css';
 
 function ContactUs() {
@@ -30,6 +31,10 @@ function ContactUs() {
 
     return (
         <div className="contact-page">
+            <SEO
+                title="Contact Us"
+                description="Get in touch with Techmiya Projects for any inquiries about final year projects, IEEE guidance, or R&D solutions. We are located in Jayanagar, Bengaluru."
+            />
             <h1>Contact Us</h1>
 
             <form onSubmit={sendWhatsApp}>

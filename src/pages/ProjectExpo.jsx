@@ -1,9 +1,14 @@
+import SEO from '../components/common/SEO';
 import '../styles/projectexpo.css';
 
 function ProjectExpo() {
     return (
         <>
-            <br /><br /><br /><br /><br /><br />
+            <SEO
+                title="Project Expo & Hackathon 2026"
+                description="Join the All India Hackathon 2026 hosted by Techmiya Solutions. Showcase your innovation and compete with the brightest minds in India."
+                keywords="hackathon 2026, project expo, engineering competition, Techmiya Hackathon"
+            />
             <div className="container">
                 <h1>All India Hackathon 2026</h1>
                 <p>Get ready to showcase your innovation, creativity, and problem-solving skills in the All India Hackathon 2026, hosted by Techmiya Solutions in collaboration with Dayananda Sagar College of Engineering, Kumaraswamy Layout, Bengaluru. This event brings together the brightest minds from across the country to collaborate, compete, and create ground-breaking solutions.</p>

@@ -1,5 +1,6 @@
 import Sidebar from '../../components/Sidebar';
 import ProjectItem from '../../components/ProjectItem';
+import SEO from '../../components/common/SEO';
 import '../../styles/projects.css';
 
 const iotProjects = [
@@ -18,11 +19,14 @@ const iotProjects = [
 function IoTProjects() {
     return (
         <>
-            <br /><br /><br /><br /><br />
+            <SEO
+                title="IoT Projects for Final Year Engineering Students"
+                description="Explore top IoT projects for final year. We provide guidance on Arduino, Raspberry Pi, ESP8266, and ESP32 with full documentation."
+                keywords="iot projects, internet of things projects, arduino iot, raspberry pi projects, smart city iot"
+            />
             <div className="container">
                 <div className="main-content">
                     <h1>Internet of Things (IoT) Projects</h1>
-                    <br /><br />
                     <ol>
                         {iotProjects.map((project, index) => (
                             <ProjectItem key={index} id={project.id} title={project.title} />

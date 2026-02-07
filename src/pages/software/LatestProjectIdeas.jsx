@@ -1,17 +1,22 @@
 import Sidebar from '../../components/Sidebar';
 import { latestProjectsData } from '../../data/latestProjectsData';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/common/SEO';
 import '../../styles/projects.css';
 
 function LatestProjectIdeas() {
     return (
         <div className="latest-projects-wrapper">
-            <br /><br /><br /><br /><br />
+            <SEO
+                title="100+ Latest Project Ideas 2026"
+                description="Discover 100+ innovative project ideas for 2026 in AI, Machine Learning, IoT, Blockchain, and more. Perfect for final year engineering students."
+                keywords="project ideas 2026, final year projects, trending project topics, AI project ideas, IoT project ideas"
+            />
             <div className="container">
                 <div className="main-content">
                     <div className="latest-header">
-                        <h1>Latest Project Ideas 2025</h1>
-                        <p className="subtitle">Explore {latestProjectsData.reduce((acc, cat) => acc + cat.projects.length, 0)}+ cutting-edge project topics for final year and research in 2025.</p>
+                        <h1>Latest Project Ideas 2026</h1>
+                        <p className="subtitle">Explore {latestProjectsData.reduce((acc, cat) => acc + cat.projects.length, 0)}+ cutting-edge project topics for final year and research in 2026.</p>
                     </div>
 
                     {latestProjectsData.map((section, idx) => (

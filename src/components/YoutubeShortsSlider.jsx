@@ -12,25 +12,25 @@ const DEFAULT_SHORTS = [
 function YoutubeShortsSlider() {
     const [shorts, setShorts] = useState(DEFAULT_SHORTS);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [activeVideo, setActiveVideo] = useState(null);
     const sectionRef = useRef(null);
 
     // Get API Key and Channel ID from environment variables
     const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
-    const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID || 'UC_x5XG1OV2P6uYZ5ujfWXBw'; // Techmiya Channel ID
+    const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID || 'UC_x5XG1OV2P6uYZ5ujfWXBw';
 
     useEffect(() => {
         const fetchLatestShorts = async () => {
             if (!API_KEY) return;
 
             try {
-                // Fetch the latest 10 videos from the channel
                 const response = await fetch(
                     `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=10&type=video`
                 );
                 const data = await response.json();
 
                 if (data.items) {
-                    const fetchedShorts = data.items.map((item, index) => ({
+                    const fetchedShorts = data.items.map((item) => ({
                         id: item.id.videoId,
                         videoId: item.id.videoId
                     }));
@@ -44,7 +44,6 @@ function YoutubeShortsSlider() {
         fetchLatestShorts();
     }, [API_KEY, CHANNEL_ID]);
 
-    // Duplicate shorts for infinite scroll effect
     const allShorts = [...shorts, ...shorts];
 
     useEffect(() => {
@@ -76,23 +75,92 @@ function YoutubeShortsSlider() {
         <section className="shorts" ref={sectionRef}>
             <div className="shorts-container">
                 <h2>Our Projects</h2>
-                <div className={`shorts-slider ${isAnimating ? 'animate' : ''}`}>
+                <div className={`shorts-slider ${isAnimating && !activeVideo ? 'animate' : ''}`}>
                     {allShorts.map((short, index) => (
                         <div key={index} className="shorts-col">
-                            <iframe
-                                width="560"
-                                height="315"
-                                src={`https://www.youtube.com/embed/${short.videoId}?autoplay=0&hl=en&cc_lang_pref=en&cc_load_policy=1&mute=1&loop=1`}
-                                title="YouTube Video"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                                loading="lazy"
-                            ></iframe>
+                            {activeVideo === index ? (
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src={`https://www.youtube.com/embed/${short.videoId}?autoplay=1&mute=0`}
+                                    title="YouTube Video"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                ></iframe>
+                            ) : (
+                                <div
+                                    className="video-placeholder"
+                                    onClick={() => {
+                                        setActiveVideo(index);
+                                        setIsAnimating(false);
+                                    }}
+                                >
+                                    <img
+                                        src={`https://img.youtube.com/vi/${short.videoId}/hqdefault.jpg`}
+                                        alt="Video Thumbnail"
+                                        loading="lazy"
+                                    />
+                                    <div className="play-overlay">
+                                        <i className="fa fa-play-circle"></i>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
             </div>
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .video-placeholder {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    overflow: hidden;
+                    background: #000;
+                    border-radius: 15px;
+                }
+                .video-placeholder img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+                }
+                .video-placeholder:hover img {
+                    transform: scale(1.1);
+                }
+                .play-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(0,0,0,0.2);
+                    transition: background 0.3s ease;
+                }
+                .play-overlay i {
+                    font-size: 4rem;
+                    color: white;
+                    opacity: 0.8;
+                    transition: all 0.3s ease;
+                }
+                .video-placeholder:hover .play-overlay {
+                    background: rgba(0,0,0,0.4);
+                }
+                .video-placeholder:hover .play-overlay i {
+                    transform: scale(1.2);
+                    opacity: 1;
+                }
+                .shorts-col iframe {
+                    border-radius: 15px;
+                    width: 100%;
+                    height: 100%;
+                }
+            `}} />
         </section>
     );
 }
