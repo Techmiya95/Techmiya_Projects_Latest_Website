@@ -1,17 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 
 const testimonials = [
-    { name: 'Vajra', review: 'I have tried many tools, but this one stands out.', rating: 4, image: '/images/user1.jpeg' },
-    { name: 'Hamsa Lekha R', review: 'The software provided by Techmiya Solutions has been a game-changer for us.', rating: 5, image: '/images/user2.jpeg' },
-    { name: 'Tejaswini', review: 'Working with Techmiya Solutions was a breeze!', rating: 4.5, image: '/images/user3.jpeg' },
-    { name: 'Varsha HD', review: 'Techmiya Solutions revolutionized the way we handle our business processes.', rating: 5, image: '/images/user4.jpeg' },
-    { name: 'Trupthi', review: 'The customer support from Techmiya Solutions is exceptional.', rating: 4, image: '/images/user5.jpeg' },
-    { name: 'Sanjay', review: "We've been using Techmiya Solutions for over a year, and it's been a game-changer.", rating: 4, image: '/images/user6.jpeg' },
-    { name: 'Prasad', review: 'I was impressed by how quickly Techmiya Solutions understood our business needs and delivered a solution that exceeded our expectations.', rating: 4.5, image: '/images/user7.jpeg' },
-    { name: 'Tameem', review: 'The ease of use and customization options are fantastic.', rating: 5, image: '/images/user8.jpeg' },
-    { name: 'Mohan', review: "Techmiya Solutions' software is exactly what we needed. It's fast, reliable, and incredibly easy to navigate.", rating: 4.5, image: '/images/user9.jpeg' },
-    { name: 'Adil', review: 'The best decision we made for our business was partnering with Techmiya Solutions.', rating: 5, image: '/images/user10.jpeg' },
-    { name: 'Mudashir', review: 'The best decision we made for our business was partnering with Techmiya Solutions.', rating: 5, image: '/images/user11.jpeg' },
+    { name: 'Vajra', review: 'I have tried many tools, but this one stands out.', rating: 4, image: '/images/user1.webp' },
+    { name: 'Hamsa Lekha R', review: 'The software provided by Techmiya Solutions has been a game-changer for us.', rating: 5, image: '/images/user2.webp' },
+    { name: 'Tejaswini', review: 'Working with Techmiya Solutions was a breeze!', rating: 4.5, image: '/images/user3.webp' },
+    { name: 'Varsha HD', review: 'Techmiya Solutions revolutionized the way we handle our business processes.', rating: 5, image: '/images/user4.webp' },
+    { name: 'Trupthi', review: 'The customer support from Techmiya Solutions is exceptional.', rating: 4, image: '/images/user5.webp' },
+    { name: 'Sanjay', review: "We've been using Techmiya Solutions for over a year, and it's been a game-changer.", rating: 4, image: '/images/user6.webp' },
+    { name: 'Prasad', review: 'I was impressed by how quickly Techmiya Solutions understood our business needs and delivered a solution that exceeded our expectations.', rating: 4.5, image: '/images/user7.webp' },
+    { name: 'Tameem', review: 'The ease of use and customization options are fantastic.', rating: 5, image: '/images/user8.webp' },
+    { name: 'Mohan', review: "Techmiya Solutions' software is exactly what we needed. It's fast, reliable, and incredibly easy to navigate.", rating: 4.5, image: '/images/user9.webp' },
+    { name: 'Adil', review: 'The best decision we made for our business was partnering with Techmiya Solutions.', rating: 5, image: '/images/user10.webp' },
+    { name: 'Mudashir', review: 'The best decision we made for our business was partnering with Techmiya Solutions.', rating: 5, image: '/images/user11.webp' },
 ];
 
 function StarRating({ rating }) {

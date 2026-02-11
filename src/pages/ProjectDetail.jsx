@@ -50,7 +50,7 @@ function ProjectDetail() {
                                 <img src={project.image} alt={project.title} className="detail-image" />
                                 <div className="image-overlay"></div>
                                 <div className="brand-floating-badge">
-                                    <img src="/images/techmiya_logo_official.jpg" alt="Techmiya" />
+                                    <img src="/images/techmiya_logo_official.webp" alt="Techmiya" />
                                 </div>
                             </div>
                         </div>

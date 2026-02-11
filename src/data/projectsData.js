@@ -7,7 +7,7 @@ export const projectsData = {
         category: "Artificial Intelligence",
         title: "AI - 1: Leaf Detection System using OpenCV Python",
         intro: "In the modern agricultural landscape, early detection of plant diseases is paramount to ensuring food security and economic stability for farmers. This project introduces an advanced Leaf Detection System powered by Computer Vision and Artificial Intelligence. By leveraging the robust capabilities of OpenCV and Python, the system analyzes high-resolution images of plant leaves to identify subtle patterns of discoloration, texture changes, and lesions that indicate the presence of specific diseases. Unlike traditional manual inspection, which is labor-intensive and prone to human error, this automated solution provides instant, accurate diagnostics. It empowers farmers to take timely, targeted action—such as applying specific pesticides or isolating affected plants—thereby preventing the spread of infection and maximizing crop yields. This technology bridges the gap between traditional farming practices and modern digital agriculture.",
-        image: "/images/soft.png",
+        image: "/images/soft.webp",
         advantages: [
             "Detects plant diseases at an early stage, significantly reducing the risk of widespread crop failure.",
             "Utilizes high-precision OpenCV algorithms to distinguish between healthy and diseased leaf tissue with over 90% accuracy.",
@@ -45,7 +45,7 @@ export const projectsData = {
         category: "Artificial Intelligence",
         title: "AI - 2: Chronic Obstructive Pulmonary Disease Prediction",
         intro: "Chronic Obstructive Pulmonary Disease (COPD) is a progressive lung condition that is often diagnosed only in its later stages. This project addresses this critical healthcare challenge by deploying a sophisticated Artificial Intelligence model for the early prediction of COPD. By analyzing a comprehensive set of patient data—including smoking history, age, environmental exposure, respiratory symptoms, and spirometry results—the system identifies high-risk individuals before severe symptoms manifest. Using advanced machine learning classification algorithms, the model detects subtle correlations in medical history that might be overlooked during a standard checkup. This proactive approach allows medical professionals to intervene earlier with lifestyle changes and treatments, significantly slowing disease progression and improving the quality of life for patients.",
-        image: "/images/healthcare_bot.png",
+        image: "/images/healthcare_bot.webp",
         advantages: [
             "Facilitates the early detection of COPD, which is crucial for effective management and improved patient prognosis.",
             "Acts as a powerful assistive tool for doctors, reducing the likelihood of misdiagnosis or oversight.",
@@ -84,7 +84,7 @@ export const projectsData = {
         category: "Artificial Intelligence",
         title: "AI - 4: Face Recognition Attendance System",
         intro: "In today's fast-paced institutional environments, traditional attendance tracking methods like paper registers or biometric fingerprint scanners face challenges regarding efficiency, hygiene, and accuracy. This project presents a state-of-the-art Face Recognition Attendance System that revolutionizes personnel management. Utilizing advanced computer vision algorithms, the system captures live video feeds to detect and recognize faces in real-time, marking attendance instantly without any physical contact. This 'touchless' technology is particularly vital in a post-pandemic world. It eliminates the possibility of 'proxy' attendance, provides precise entry and exit logs, and dramatically reduces the time spent on administrative tasks. The system ensures a secure, seamless, and automated workflow for organizations of all sizes.",
-        image: "/images/face_attendance.png",
+        image: "/images/face_attendance.webp",
         advantages: [
             "Completely eliminates 'proxy' or buddy punching, ensuring 100% genuine attendance records.",
             "Offers a touchless, hygienic solution that prevents the spread of germs, unlike fingerprint scanners.",
@@ -123,7 +123,7 @@ export const projectsData = {
         category: "Artificial Intelligence",
         title: "AI - 10: Skin Disease Detection System Using CNN",
         intro: "Skin diseases are among the most common health issues globally, yet access to dermatological expertise is often limited or delayed. This project bridges this gap with an innovative Skin Disease Detection System driven by Deep Learning. Using Convolutional Neural Networks (CNNs), the system analyzes images of skin lesions to classify them into various conditions such as melanoma, eczema, psoriasis, and others. It acts as a preliminary diagnostic tool, empowering users to perform a quick self-check using their smartphones. For medical professionals, it serves as a 'second opinion' system, highlighting suspicious lesions that require urgent biopsy or treatment. This technology democratizes access to skin healthcare, enabling early intervention which is critical for conditions like skin cancer.",
-        image: "/images/skin_disease.png",
+        image: "/images/skin_disease.webp",
         advantages: [
             "Provides instant, preliminary analysis of skin conditions, reducing anxiety and wait times.",
             "Utilizes state-of-the-art CNN architectures to achieve high diagnostic accuracy.",
@@ -165,7 +165,7 @@ export const projectsData = {
         category: "Python",
         title: "PY - 1: AI Healthcare Bot System using Python",
         intro: "In an era where immediate access to medical information is crucial, the AI Healthcare Bot System serves as an intelligent, 24/7 virtual medical assistant. Utilizing Natural Language Processing (NLP) techniques, this Python-based application understands user queries regarding symptoms, medicines, and general health concerns. It engages users in a conversational manner to triage symptoms, suggesting potential causes and recommending whether to see a doctor immediately or apply home remedies. This system acts as a first line of defense in healthcare, reducing the load on emergency rooms for minor ailments and providing anxiety-relieving information instantly to patients. It ensures that reliable medical guidance is available to everyone, anytime, anywhere.",
-        image: "/images/healthcare_bot.png",
+        image: "/images/healthcare_bot.webp",
         advantages: [
             "Ensures 24/7 availability of medical guidance, independent of clinic operating hours.",
             "Provides privacy-preserving interactions for patients hesitant to discuss sensitive issues.",
@@ -185,7 +185,7 @@ export const projectsData = {
         category: "Python",
         title: "PY - 36: Parkinson's Detector System using Python",
         intro: "Parkinson's disease is a neurodegenerative disorder where early detection significantly impacts the efficacy of treatment. This project details a non-invasive Parkinson's Detector System that leverages Machine Learning to analyze vocal patterns. Subtle changes in voice, such as tremors, jitter, and shimmer, often appear years before visible physical symptoms. This system processes high-precision voice recordings to extract these acoustic features and classifies them using advanced algorithms like XGBoost. By providing a reliable, quick, and painless screening method, this tool assists neurologists in identifying at-risk patients early, enabling timely therapeutic interventions that can vastly improve quality of life.",
-        image: "/images/parkinsons_detector.png",
+        image: "/images/parkinsons_detector.webp",
         advantages: [
             "Facilitates early intervention, which is critical for managing neurodegenerative diseases.",
             "Completely non-invasive and painless screening using only a voice recording.",
@@ -249,7 +249,7 @@ export const projectsData = {
         category: "Java",
         title: "JA - 1: Online Banking System using Java",
         intro: "Trust and security are the pillars of the financial world. The Online Banking System is a robust, enterprise-grade web application built to simulate a real-world banking environment. Developed using Java's secure and scalable technologies, the system allows users to perform critical banking operations—such as creating accounts, transferring funds, viewing statements, and managing profiles—from the comfort of their homes. It implements industry-standard security measures, including data encryption and secure session management, to protect sensitive financial information. This project not only provides convenience to customers but also streamlines backend operations for bank administrators, showcasing a complete digital financial ecosystem.",
-        image: "/images/app.png",
+        image: "/images/app.webp",
         advantages: [
             "Implements a highly secure multi-tier architecture to protect against cyber threats.",
             "Enables real-time transaction processing for instant fund transfers.",
@@ -271,7 +271,7 @@ export const projectsData = {
         category: "Machine Learning",
         title: "ML - 1: AI Healthcare Bot System using Python",
         intro: "Navigating medical symptoms can be confusing and anxiety-inducing. The AI Healthcare Bot is an intelligent Machine Learning system designed to provide clarity and immediate guidance. By analyzing vast datasets of disease-symptom relationships, the bot learns to predict potential health conditions based on user inputs. Unlike simple rule-based chatbots, this system improves its accuracy over time. It offers users a personalized interaction, asking relevant follow-up questions to refine its prediction, and provides actionable advice, such as precautionary measures or the urgency of seeking professional help. This tool empowers users with knowledge, acting as a reliable health companion.",
-        image: "/images/healthcare_bot.png",
+        image: "/images/healthcare_bot.webp",
         advantages: [
             "Delivers accurate disease predictions based on training with large historical medical datasets.",
             "Scalable architecture supports thousands of concurrent users, ideal for public health crises.",
@@ -291,7 +291,7 @@ export const projectsData = {
         category: "Machine Learning",
         title: "ML - 11: Signature Verification System Using CNN",
         intro: "In the world of finance and law, a signature is a seal of identity and intent, making it a prime target for forgery. The Signature Verification System employs cutting-edge Convolutional Neural Networks (CNNs) to automate the authentication of handwritten signatures. By learning the intricate, unique features of a genuine signature—such as stroke width, angle, and curvature—the model can distinguish between a valid signature and a skilled forgery with high precision. This system eliminates the subjectivity and fatigue associated with manual verification, providing a fast, objective, and secure method for validating checks, contracts, and legal documents in real-time.",
-        image: "/images/signature_verification.png",
+        image: "/images/signature_verification.webp",
         advantages: [
             "Effectively prevents fraud and forgery in critical financial and legal documents.",
             "Achieves high verification speed and accuracy, processing documents in milliseconds.",
@@ -465,7 +465,7 @@ export const projectsData = {
         category: "Python",
         title: "PY - 2: Network Packet Sniffer using Python",
         intro: "In the invisible war of cybersecurity, visibility is the ultimate weapon. The Network Packet Sniffer is a powerful Python-based tool designed to make the invisible visible. It intercepts and logs traffic passing over a digital network, breaking down each packet to reveal its origin, destination, and content. It's like a digital X-ray for network cables. Whether it's troubleshooting a slow connection, detecting unauthorized data exfiltration, or analyzing a malware's communication channel, this tool provides the raw, unfiltered truth of what is happening on the wire. It is an essential instrument for any network administrator or cybersecurity student.",
-        image: "/images/IT.png",
+        image: "/images/IT.webp",
         advantages: [
             "Performs deep, low-level packet analysis without the need for expensive commercial tools.",
             "Provides real-time visualization of network traffic, aiding instant diagnostics.",
@@ -485,7 +485,7 @@ export const projectsData = {
         category: "Internet of Things",
         title: "Smart Waste Management System using GPS & GSM",
         intro: "Urbanization brings waste, and traditional collection methods are inefficient and dirty. The Smart Waste Management System modernizes this critical public service using IoT. Smart bins equipped with ultrasonic sensors constantly monitor their own fill levels. When a bin nears capacity, it doesn't just sit there overflowing; it sends an alert via GSM, complete with its GPS location, to a central command center. This allows the city to route collection trucks only to the bins that actually need emptying. The result is a cleaner city, reduced fuel consumption, and an optimized workforce. It turns waste collection from a reactive chore into a proactive, data-driven operation.",
-        image: "/images/electronicsprojects.png",
+        image: "/images/electronicsprojects.webp",
         advantages: [
             "Drastically reduces fuel consumption and carbon footprint by optimizing truck routes.",
             "Prevents the public health hazard of overflowing garbage bins.",
@@ -505,7 +505,7 @@ export const projectsData = {
         category: "Internet of Things",
         title: "Home Automation System using ESP32 and Firebase",
         intro: "The home of the future is here, and it is intelligent. This Home Automation System project transforms any standard house into a Smart Home using the power of the ESP32 microcontroller and Google Firebase. It empowers users to control lights, fans, and appliances from anywhere in the world using a custom mobile app. Beyond simple remote control, the system offers real-time status feedback—so you know if you left the iron on. With the potential for voice control integration and automated scheduling, it offers unparalleled convenience, security, and energy efficiency. It puts the control of your environment right in your pocket.",
-        image: "/images/electronicsprojects.png",
+        image: "/images/electronicsprojects.webp",
         advantages: [
             "Controls your home from anywhere in the world with internet connectivity.",
             "Experience ultra-low latency real-time control thanks to Firebase's speed.",
@@ -525,7 +525,7 @@ export const projectsData = {
         category: "Java",
         title: "JA - 2: Hospital Management System Enterprise Edition",
         intro: "Healthcare facilities are complex ecosystems that require precision management. The Hospital Management System (Enterprise Edition) is a comprehensive Java-based ERP solution designed to digitize administrative operations. It unifies patient registration, appointment scheduling, electronic medical records (EMR), billing, and inventory management into a single, cohesive platform. Built with a focus on data integrity and security, it ensures that critical patient history is instantly available to authorized doctors while remaining protected from unauthorized access. This system eliminates paperwork, reduces errors, and streamlines the patient journey from admission to discharge.",
-        image: "/images/soft.png",
+        image: "/images/soft.webp",
         advantages: [
             "Centralizes data management, eliminating fragmented paper records.",
             "Automates billing and insurance processing, reducing revenue leakage.",
@@ -599,13 +599,13 @@ export const getProjectById = (id) => {
     };
 
     const imageMap = {
-        'ai': '/images/soft.png',
-        'python': '/images/IT.png',
-        'iot': '/images/electronicsprojects.png',
-        'java': '/images/app.png',
-        'ml': '/images/healthcare_bot.png',
-        'android': '/images/app.png',
-        'blockchain': '/images/block.png'
+        'ai': '/images/soft.webp',
+        'python': '/images/IT.webp',
+        'iot': '/images/electronicsprojects.webp',
+        'java': '/images/app.webp',
+        'ml': '/images/healthcare_bot.webp',
+        'android': '/images/app.webp',
+        'blockchain': '/images/block.webp'
     };
 
     const categoryName = categoryMap[catt] || catt.toUpperCase();
@@ -616,7 +616,7 @@ export const getProjectById = (id) => {
         category: categoryName,
         title: `${categoryName} Project ${projectNum}`,
         intro: `This project focuses on advanced implementation in the field of ${categoryName}. It utilizes modern frameworks and methodologies to solve complex industrial and research problems in the ${categoryName} domain. The solution is designed to be robust, scalable, and user-friendly, complying with modern software engineering standards.`,
-        image: imageMap[catt] || "/images/soft.png",
+        image: imageMap[catt] || "/images/soft.webp",
         advantages: [
             "Optimized performance and scalability for real-world use.",
             "Industry-standard implementation using best practices.",

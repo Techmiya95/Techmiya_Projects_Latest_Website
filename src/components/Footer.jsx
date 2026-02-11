@@ -29,14 +29,14 @@ function Footer() {
                         {/* Center Logo & Info */}
                         <div className="col">
                             <div className="slogan" style={{ textAlign: 'center' }}>
-                                <img src="/images/logo.png" alt="Techmiya Logo" />
+                                <img src="/images/logo.webp" alt="Techmiya Logo" />
                             </div>
 
                             <div className="payments">
-                                <a href="https://www.visa.co.in/"><img src="/images/visa.png" alt="Visa" /></a>
-                                <a href="https://www.rupay.co.in/"><img src="/images/rupay.png" alt="Rupay" /></a>
-                                <a href="https://www.mastercard.co.in/en-in.html"><img src="/images/mastercard.png" alt="Mastercard" /></a>
-                                <a href="https://www.americanexpress.com/en-in/"><img src="/images/american-express.png" alt="Amex" /></a>
+                                <a href="https://www.visa.co.in/"><img src="/images/visa.webp" alt="Visa" /></a>
+                                <a href="https://www.rupay.co.in/"><img src="/images/rupay.webp" alt="Rupay" /></a>
+                                <a href="https://www.mastercard.co.in/en-in.html"><img src="/images/mastercard.webp" alt="Mastercard" /></a>
+                                <a href="https://www.americanexpress.com/en-in/"><img src="/images/american-express.webp" alt="Amex" /></a>
                             </div>
 
                             <div className="socialIcons">

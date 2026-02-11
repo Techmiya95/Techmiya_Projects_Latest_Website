@@ -9,7 +9,7 @@ function FloatingSocial() {
                     rel="noopener noreferrer"
                     className="whatsapp-button"
                 >
-                    <img src="/images/whatsapp-icon.png" alt="WhatsApp" />
+                    <img src="/images/whatsapp-icon.webp" alt="WhatsApp" />
                 </a>
             </div>
 
@@ -21,7 +21,7 @@ function FloatingSocial() {
                     rel="noopener noreferrer"
                     className="instagram-button"
                 >
-                    <img src="/images/instagram-icon.png" alt="Instagram" />
+                    <img src="/images/instagram-icon.webp" alt="Instagram" />
                 </a>
             </div>
 
@@ -33,7 +33,7 @@ function FloatingSocial() {
                     rel="noopener noreferrer"
                     className="linkedin-button"
                 >
-                    <img src="/images/linkedin.png" alt="LinkedIn" />
+                    <img src="/images/linkedin.webp" alt="LinkedIn" />
                 </a>
             </div>
 
@@ -45,7 +45,7 @@ function FloatingSocial() {
                     rel="noopener noreferrer"
                     className="youtube-button"
                 >
-                    <img src="/images/youtube.png" alt="YouTube" />
+                    <img src="/images/youtube.webp" alt="YouTube" />
                 </a>
             </div>
         </>

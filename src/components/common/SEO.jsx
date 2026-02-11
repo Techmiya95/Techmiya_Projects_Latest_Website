@@ -14,7 +14,7 @@ const SEO = ({
     const defaultTitle = 'Best Final Year Projects Center Bangalore | IEEE, AI, ML, IoT';
     const defaultDescription = 'Techmiya Projects is the best final year project center in Bangalore. Specialized in IEEE, AI, ML, IoT, and Engineering projects with full documentation and guidance.';
     const defaultKeywords = 'final year projects, IEEE projects, project center bangalore, AI projects for students, ML projects, IoT projects, engineering projects, Techmiya Projects';
-    const defaultImage = `${siteUrl}/images/logo.png`;
+    const defaultImage = `${siteUrl}/images/logo.webp`;
 
     const fullTitle = title ? `${title} | Techmiya Projects` : defaultTitle;
     const metaDescription = description || defaultDescription;

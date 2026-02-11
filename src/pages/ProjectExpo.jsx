@@ -15,10 +15,10 @@ function ProjectExpo() {
 
                 <div className="slider">
                     <div className="slides">
-                        <img src="/images/expo1.jpg" alt="Hackathon Image 1" width="200" height="400" />
-                        <img src="/images/expo2.jpg" alt="Hackathon Image 2" width="200" height="400" />
-                        <img src="/images/expo3.jpg" alt="Hackathon Image 3" width="200" height="400" />
-                        <img src="/images/expo4.jpg" alt="Hackathon Image 4" width="200" height="400" />
+                        <img src="/images/expo1.webp" alt="Hackathon Image 1" width="200" height="400" />
+                        <img src="/images/expo2.webp" alt="Hackathon Image 2" width="200" height="400" />
+                        <img src="/images/expo3.webp" alt="Hackathon Image 3" width="200" height="400" />
+                        <img src="/images/expo4.webp" alt="Hackathon Image 4" width="200" height="400" />
                     </div>
                 </div>
 

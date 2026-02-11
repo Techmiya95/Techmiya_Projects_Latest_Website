@@ -21,7 +21,7 @@ function Header() {
   return (
     <header className="sticky-header">
       <nav>
-        <Link to="/"><img src="/images/logo.png" alt="Logo" /></Link>
+        <Link to="/"><img src="/images/logo.webp" alt="Logo" /></Link>
         <div className={`nav-links ${menuOpen ? 'active' : ''}`} id="navLinks">
           <i className="fa fa-times close-icon" onClick={toggleMenu}></i>
           <ul onClick={closeDropdowns}>

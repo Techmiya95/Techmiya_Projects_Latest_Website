@@ -20,7 +20,7 @@ function Game() {
             </header>
 
             <div className="flyer-wrapper">
-                <img className="flyer" src="/images/flyer.jpeg" alt="Game Flyer" />
+                <img className="flyer" src="/images/flyer.webp" alt="Game Flyer" />
             </div>
 
             <div className="games-container">

@@ -12,7 +12,7 @@ function Home() {
                 keywords="final year projects, IEEE projects bangalore, best project center, AI projects, ML projects, IoT projects, Techmiya"
             />
             {/* Hero Section */}
-            <section className="page1" style={{ backgroundImage: "url('/images/collage.png')" }}>
+            <section className="page1" style={{ backgroundImage: "url('/images/collage.webp')" }}>
                 <div className="hero-overlay"></div>
                 <div className="text-box">
                     <p className="hero-keywords"><strong>Expert Guidance for Final Year Projects, IEEE Projects, and Project for Students.</strong></p>
@@ -27,16 +27,16 @@ function Home() {
                 <div className="row">
                     <div className="final-year" id="final-year">
                         <div className="slide1">
-                            <img src="/images/softwareprojects.png" alt="Software Projects" />
+                            <img src="/images/softwareprojects.webp" alt="Software Projects" />
                         </div>
                         <div className="slide1">
-                            <img src="/images/electronicsprojects.png" alt="Electronics Projects" />
+                            <img src="/images/electronicsprojects.webp" alt="Electronics Projects" />
                         </div>
                         <div className="slide1">
-                            <img src="/images/IT.png" alt="IT Projects" />
+                            <img src="/images/IT.webp" alt="IT Projects" />
                         </div>
                         <div className="slide1">
-                            <img src="/images/collage.png" alt="College Projects" />
+                            <img src="/images/collage.webp" alt="College Projects" />
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@ function Home() {
                 </div>
                 <div className="service-box">
                     <div className="single-service">
-                        <img loading="lazy" src="/images/cutt.png" alt="Cutting Edge Technologies at Techmiya" />
+                        <img loading="lazy" src="/images/cutt.webp" alt="Cutting Edge Technologies at Techmiya" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Cutting Edge Technologies</h3>
@@ -178,7 +178,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/real.png" alt="Real World Projects Experience" />
+                        <img loading="lazy" src="/images/real.webp" alt="Real World Projects Experience" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Real World Projects</h3>
@@ -186,7 +186,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/collab.png" alt="Collaborative Learning Environment" />
+                        <img loading="lazy" src="/images/collab.webp" alt="Collaborative Learning Environment" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Collaborative Learning</h3>
@@ -194,7 +194,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/mentor.png" alt="Industrial Mentorship for Students" />
+                        <img loading="lazy" src="/images/mentor.webp" alt="Industrial Mentorship for Students" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Industrial Mentorship</h3>
@@ -202,7 +202,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/creativity.png" alt="Innovation and Creativity focus" />
+                        <img loading="lazy" src="/images/creativity.webp" alt="Innovation and Creativity focus" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Innovation and Creativity</h3>
@@ -210,7 +210,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="single-service">
-                        <img loading="lazy" src="/images/Certification.png" alt="Project Certification and Recognition" />
+                        <img loading="lazy" src="/images/Certification.webp" alt="Project Certification and Recognition" />
                         <div className="overlay"></div>
                         <div className="service-desc">
                             <h3>Certification and Recognition</h3>
@@ -224,7 +224,7 @@ function Home() {
             <div className="internship-feedback">
                 <h2>Project Feedback</h2>
                 <p>Your feedback helps us improve our project program.</p>
-                <img src="/qr.png" alt="Internship Feedback QR Code" className="feedback-qr" />
+                <img src="/qr.webp" alt="Internship Feedback QR Code" className="feedback-qr" />
                 <a href="https://forms.gle/miP4aAFBNfFcHdF18" target="_blank" rel="noopener noreferrer" className="feedback-btn">
                     Click Here to Give Project Feedback
                 </a>
