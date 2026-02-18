@@ -1,5 +1,6 @@
 import TestimonialSlider from '../components/TestimonialSlider';
 import YoutubeShortsSlider from '../components/YoutubeShortsSlider';
+import VideoTestimonialSlider from '../components/VideoTestimonialSlider';
 import SEO from '../components/common/SEO';
 
 
@@ -148,6 +149,9 @@ function Home() {
 
             {/* YouTube Shorts */}
             <YoutubeShortsSlider />
+
+            {/* Video Testimonials */}
+            <VideoTestimonialSlider />
 
             {/* FAQ Section */}
             <section className="faq">

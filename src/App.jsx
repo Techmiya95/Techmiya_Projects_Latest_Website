@@ -49,6 +49,10 @@ const EmbeddedSystems = lazy(() => import('./pages/domains/EmbeddedSystems'));
 const PythonDataScience = lazy(() => import('./pages/domains/PythonDataScience'));
 const AIAndML = lazy(() => import('./pages/domains/AIAndML'));
 
+// Blogs
+const LatestTech = lazy(() => import('./pages/blogs/LatestTech'));
+const WriteBlog = lazy(() => import('./pages/blogs/WriteBlog'));
+
 // Footer Pages
 const FAQ = lazy(() => import('./pages/footer-pages/FAQ'));
 const TermsConditions = lazy(() => import('./pages/footer-pages/TermsConditions'));
@@ -69,6 +73,10 @@ function App() {
               <Route path="projectexpo" element={<ProjectExpo />} />
               <Route path="project/:projectId" element={<ProjectDetail />} />
               <Route path="game" element={<Game />} />
+
+              {/* Blogs */}
+              <Route path="latest-tech-blogs" element={<LatestTech />} />
+              <Route path="write-a-blog" element={<WriteBlog />} />
 
               {/* Software Projects */}
               <Route path="software-projects/python" element={<PythonProjects />} />
