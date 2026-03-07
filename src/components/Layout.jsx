@@ -9,11 +9,32 @@ function Layout() {
         <>
             <SEO />
             <Header />
-            <main style={{ minHeight: '80vh', paddingTop: '100px' }}>
+            <main className="main-content" style={{ minHeight: '80vh' }}>
                 <Outlet />
             </main>
             <Footer />
             <FloatingSocial />
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .main-content {
+                    padding-top: 170px;
+                }
+                @media (max-width: 992px) {
+                    .main-content {
+                        padding-top: 130px;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .main-content {
+                        padding-top: 85px;
+                    }
+                }
+                @media (max-width: 480px) {
+                    .main-content {
+                        padding-top: 80px;
+                    }
+                }
+            `}} />
         </>
     );
 }

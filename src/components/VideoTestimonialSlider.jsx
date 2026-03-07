@@ -140,9 +140,9 @@ function VideoTestimonialSlider() {
                     animation-play-state: running;
                 }
                 .video-review-col {
-                    min-width: 320px;
-                    height: 560px;
-                    margin: 0 20px;
+                    min-width: 400px;
+                    height: 300px;
+                    margin: 0 15px;
                     position: relative;
                 }
                 .video-placeholder {
@@ -152,14 +152,15 @@ function VideoTestimonialSlider() {
                     cursor: pointer;
                     overflow: hidden;
                     background: #000;
-                    border-radius: 15px;
-                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 20px;
+                    border: 1px solid rgba(0, 212, 255, 0.15);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                 }
                 .video-placeholder img {
                     width: 100%;
                     height: 100%;
-                    object-fit: contain;
-                    transition: transform 0.3s ease;
+                    object-fit: cover;
+                    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
                 }
                 .video-placeholder:hover img {
                     transform: scale(1.1);
@@ -173,48 +174,70 @@ function VideoTestimonialSlider() {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: rgba(0,0,0,0.3);
-                    transition: background 0.3s ease;
+                    background: rgba(0,0,0,0.4);
+                    transition: all 0.4s ease;
                 }
                 .play-overlay i {
-                    font-size: 3.5rem;
+                    font-size: 4rem;
                     color: white;
-                    opacity: 0.8;
-                    transition: all 0.3s ease;
+                    opacity: 0.9;
+                    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.5));
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 }
                 .video-placeholder:hover .play-overlay {
-                    background: rgba(0,0,0,0.5);
+                    background: rgba(0,0,0,0.2);
                 }
                 .video-placeholder:hover .play-overlay i {
                     transform: scale(1.1);
+                    color: #00d4ff;
                     opacity: 1;
                 }
                 .review-label {
                     position: absolute;
                     bottom: 15px;
                     left: 15px;
-                    background: rgba(0, 212, 255, 0.8);
-                    color: white;
-                    padding: 4px 12px;
-                    border-radius: 20px;
-                    font-size: 0.8rem;
-                    font-weight: 600;
-                    backdrop-filter: blur(5px);
+                    background: linear-gradient(135deg, rgba(0, 212, 255, 0.9) 0%, rgba(0, 184, 217, 0.9) 100%);
+                    color: #0a192f;
+                    padding: 5px 15px;
+                    border-radius: 30px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    backdrop-filter: blur(8px);
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
                 }
                 .video-review-col iframe {
-                    border-radius: 15px;
+                    border-radius: 20px;
                     width: 100%;
                     height: 100%;
-                    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+                    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+                }
+
+                @media (max-width: 992px) {
+                    .video-review-col {
+                        min-width: 350px;
+                        height: 262px;
+                    }
                 }
 
                 @media (max-width: 768px) {
                     .video-review-col {
-                        min-width: 300px;
-                        height: 168.75px;
+                        min-width: 280px;
+                        height: 210px;
+                        margin: 0 10px;
                     }
                     .play-overlay i {
-                        font-size: 2.5rem;
+                        font-size: 3rem;
+                    }
+                    .video-testimonials-container h2 {
+                        font-size: 1.5rem;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .video-review-col {
+                        min-width: 240px;
+                        height: 180px;
                     }
                 }
             `}} />

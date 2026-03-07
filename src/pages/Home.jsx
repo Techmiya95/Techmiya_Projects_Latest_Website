@@ -1,6 +1,7 @@
 import TestimonialSlider from '../components/TestimonialSlider';
 import YoutubeShortsSlider from '../components/YoutubeShortsSlider';
 import VideoTestimonialSlider from '../components/VideoTestimonialSlider';
+import BottomAnnouncement from '../components/BottomAnnouncement';
 import SEO from '../components/common/SEO';
 
 
@@ -18,7 +19,7 @@ function Home() {
                 <div className="text-box">
                     <p className="hero-keywords"><strong>Expert Guidance for Final Year Projects, IEEE Projects, and Project for Students.</strong></p>
                     <h1>Techmiya Projects</h1>
-                    <p>Empowering the next generation of innovators where boundless creativity converges with cutting-edge technology.</p>
+                    <p className="hero-desc">Empowering the next generation of innovators where boundless creativity converges with cutting-edge technology.</p>
                 </div>
             </section>
 
@@ -233,6 +234,8 @@ function Home() {
                     Click Here to Give Project Feedback
                 </a>
             </div>
+
+            <BottomAnnouncement />
         </>
     );
 }

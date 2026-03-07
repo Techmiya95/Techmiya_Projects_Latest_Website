@@ -1,3 +1,88 @@
+/* ===== ANNOUNCEMENT & BRANCHES BARS ===== */
+.announcement-bar {
+    width: 100%;
+    background: linear-gradient(135deg, #0a1628 0%, #112c66 50%, #0a1628 100%);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.announcement-bar span {
+    display: inline-block;
+    animation: announcePulse 3s ease-in-out infinite;
+}
+
+@keyframes announcePulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.85;
+        text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+    }
+}
+
+.branches-bar {
+    width: 100%;
+    background: linear-gradient(135deg, #00b8d9 0%, #00d4ff 50%, #00b8d9 100%);
+    color: #0a192f;
+    text-align: center;
+    padding: 6px 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+    z-index: 1001;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+.branches-label {
+    font-weight: 700;
+    color: #0a192f;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.branches-label i {
+    color: #0a192f;
+}
+
+.branch-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.branch-item i {
+    font-size: 11px;
+    color: #0a192f;
+}
+
+.branch-separator {
+    color: rgba(10, 25, 47, 0.4);
+    font-weight: 300;
+}
+
 /* ===== BEAUTIFUL NAVIGATION BAR ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
@@ -10,7 +95,7 @@
 /* Sticky Header with Gradient */
 .sticky-header {
     position: fixed;
-    top: 0;
+    top: 70px;
     width: 100%;
     background: linear-gradient(135deg, #0a192f 0%, #112c66 50%, #1e3a5f 100%);
     color: #fff;
@@ -133,7 +218,7 @@ ul {
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    padding: 10px 18px;
+    padding: 10px 15px;
     border-radius: 8px;
     transition: all 0.3s ease;
     display: flex;
@@ -142,6 +227,7 @@ ul {
     background: transparent;
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 /* Hover glow effect */
@@ -201,6 +287,8 @@ ul li ul.dropdown {
     transform: translateX(-50%) translateY(15px);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index: 999;
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 /* Dropdown arrow */
@@ -264,7 +352,22 @@ nav .fa {
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 992px) {
+    .announcement-bar {
+        font-size: 11px;
+        padding: 6px 15px;
+    }
+
+    .branches-bar {
+        font-size: 11px;
+        padding: 6px 15px;
+        top: 30px;
+        /* Announcement bar height */
+        gap: 10px;
+    }
+
     .sticky-header {
+        top: 62px;
+        /* Total height of both bars */
         height: 70px;
         padding: 0 15px;
     }
@@ -353,7 +456,18 @@ nav .fa {
 }
 
 @media (max-width: 768px) {
+    .announcement-bar {
+        font-size: 10px;
+    }
+
+    .branches-bar {
+        display: none;
+        /* Hide branches bar on very small screens to avoid clutter, keep announcement */
+    }
+
     .sticky-header {
+        top: 28px;
+        /* Height of announcement bar only */
         height: 65px;
         padding: 0 10px;
     }
