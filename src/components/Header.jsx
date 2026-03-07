@@ -29,9 +29,10 @@ function Header() {
             <li><Link to="/">HOME</Link></li>
             <li className={activeDropdown === 1 ? 'active' : ''} onClick={(e) => handleDropdownClick(1, e)}>
               <a href="#">BRANCHES <i className="fa fa-caret-down"></i></a>
-              <ul className="dropdown">
+                <ul className="dropdown">
                 <li><Link to="/software-projects/python">Computer Science</Link></li>
                 <li><Link to="/electronic-projects/raspberrypi">Electronics and Communication</Link></li>
+                <li><Link to="/electronic-projects/vlsi">VLSI Design</Link></li>
                 <li><Link to="/software-projects/machine-learning">Machine Learning</Link></li>
                 <li><Link to="/software-projects/ai">Artificial Intelligence</Link></li>
               </ul>
@@ -48,6 +49,7 @@ function Header() {
                 <li><Link to="/electronic-projects/wireless">Wireless Communication Projects</Link></li>
                 <li><Link to="/electronic-projects/solar">Solar based Projects</Link></li>
                 <li><Link to="/electronic-projects/gps">GPS based projects</Link></li>
+                <li><Link to="/electronic-projects/vlsi">VLSI & FPGA Projects</Link></li>
               </ul>
             </li>
             <li className={activeDropdown === 3 ? 'active' : ''} onClick={(e) => handleDropdownClick(3, e)}>

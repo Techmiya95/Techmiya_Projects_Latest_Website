@@ -5,9 +5,9 @@
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 100px 20px 40px;
+    padding: 20px 20px 40px;
     gap: 40px;
-    min-height: 100vh;
+    min-height: calc(100vh - 120px);
     background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
@@ -262,7 +262,7 @@
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        padding: 90px 15px 30px;
+        padding: 15px 15px 30px;
         gap: 20px;
     }
 

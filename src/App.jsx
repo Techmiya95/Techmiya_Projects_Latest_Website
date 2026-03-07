@@ -43,6 +43,7 @@ const GSMProjects = lazy(() => import('./pages/electronic/GSMProjects'));
 const WirelessProjects = lazy(() => import('./pages/electronic/WirelessProjects'));
 const SolarProjects = lazy(() => import('./pages/electronic/SolarProjects'));
 const GPSProjects = lazy(() => import('./pages/electronic/GPSProjects'));
+const VLSIProjects = lazy(() => import('./pages/electronic/VLSIProjects'));
 
 // Domains
 const EmbeddedSystems = lazy(() => import('./pages/domains/EmbeddedSystems'));
@@ -101,6 +102,7 @@ function App() {
               <Route path="electronic-projects/wireless" element={<WirelessProjects />} />
               <Route path="electronic-projects/solar" element={<SolarProjects />} />
               <Route path="electronic-projects/gps" element={<GPSProjects />} />
+              <Route path="electronic-projects/vlsi" element={<VLSIProjects />} />
 
               {/* Domains */}
               <Route path="domains/embedded-systems" element={<EmbeddedSystems />} />

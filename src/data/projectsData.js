@@ -539,6 +539,325 @@ export const projectsData = {
         methodology: "The Hospital Management System (HMS) Enterprise Edition is a complex, data-driven application designed to handle the intricate workflows of a medical facility.\n\n**1. Database Design (The Foundation):**\nThe system relies on a strictly normalized Relational Database (**MySQL** or **Oracle**). The schema includes tables for Patients, Doctors, Appointments, Prescriptions, Rooms, and Inventory. Foreign keys enforce relationships (e.g., a Prescription must be linked to a valid Doctor and Patient). **ACID compliance** ensures that medical records are never corrupted.\n\n**2. Backend Logic (Java Enterprise):**\nThe core logic is implemented using **Java (J2EE/Spring Boot)**. \n*   **Patient Registration Module:** Assigns unique Patient IDs and stores demographic/history data.\n*   **Appointment Scheduling:** Handles complex logic to prevent double-booking of doctors, taking into account their shift timings and leave status.\n*   **In-Patient Management:** Tracks ward allocation, bed availability, and daily updates to the patient's chart.\n*   **Billing Engine:** Automatically aggregates costs from consultations, lab tests, medicines, and room charges to generate the final discharge bill/invoice, handling insurance co-pays.\n\n**3. User Interface:**\nThe frontend is designed for speed and clarity using **Java Swing** (for desktop clients) or **JSP/React** (for web access). It features intuitive forms, search functionality to find patients by name/ID instantly, and dashboards for hospital administrators.\n\n**4. Security & Privacy:**\nFollowing HIPAA guidelines, the system implements Role-Based Access Control (RBAC). \n*   **Receptionists** can view schedules but not detailed medical history.\n*   **Doctors** have full read/write access to their patients' records.\n*   **Pharmacists** can only view prescriptions.\nData is encrypted at rest and in transit to prevent breaches.",
         applications: "This Enterprise ERP system is the digital backbone of modern healthcare infrastructure:\n\n**1. Large Multi-Specialty Hospitals:**\nit orchestrates the thousands of daily interactions between hundreds of staff and patients. It ensures that a patient moving from the ER to the X-ray department to the Operation Theatre has their data move seamlessly with them.\n\n**2. Clinics and Polyclinics:**\nSmaller versions of the system help private practitioners manage their practice, digitization of patient history replacing cumbersome paper files, and automating appointment reminders.\n\n**3. Pharmacy & Inventory Management:**\nThe system tracks medicine stock levels in real-time. It alerts the purchase department before critical life-saving drugs run out of stock and tracks expiration dates to prevent wastage.\n\n**4. Medical Research & Analytics:**\nAnonymous aggregated data from the system helps hospital management analyze disease trends (e.g., '30% increase in dengue cases this month'), resource utilization (e.g., 'MRI machine is under-utilized'), and financial health.\n\n**5. Tele-Consultation Integration:**\nModern versions integrate with video-conferencing modules to support remote patients, generating digital prescriptions that are instantly emailed to the patient.",
         conclusion: "This project demonstrates the stability and power of Java in critical sectors. It shows that software is not just about code; it's about creating systems that care for the people who care for us."
+    },
+
+    // VLSI PROJECTS
+    "vlsi-1": {
+        id: "vlsi-1",
+        category: "VLSI Design",
+        title: "VLSI - 1: 8-bit ALU Design using Verilog HDL",
+        intro: "The Arithmetic Logic Unit (ALU) is the computational heart of every digital processor. This project presents the complete design and simulation of an 8-bit ALU using Verilog Hardware Description Language (HDL). The ALU is capable of performing 16 fundamental operations including addition, subtraction, AND, OR, XOR, NAND, NOR, and comparison functions. By designing this at the Register Transfer Level (RTL), the project explores how logical operations translate into actual digital circuits. This foundational project gives engineers a deep understanding of how CPUs work at the silicon level, from gate-level design to timing analysis and FPGA deployment verification.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Provides a deep understanding of CPU architecture and arithmetic circuit design.",
+            "Implements 16 operations including arithmetic, logical, and comparison functions.",
+            "Fully simulated using ModelSim/Vivado with verified waveform outputs.",
+            "Synthesizable RTL code easily deployable on Xilinx or Intel FPGAs.",
+            "Optimized for minimal gate count and propagation delay.",
+            "Includes comprehensive test bench for functional verification.",
+            "Demonstrates carry propagation, overflow detection, and zero flag generation.",
+            "Serves as a building block for custom RISC processor design."
+        ],
+        methodology: "The 8-bit ALU design follows a structured RTL methodology using Verilog HDL.\n\n**1. Requirement Analysis & Operation Set Definition:**\nThe ALU is defined to support 16 operations selected via a 4-bit opcode: ADD, SUB, MUL, DIV, AND, OR, XOR, XNOR, NAND, NOR, NOT, SHL, SHR, ROL, ROR, and CMP (compare). Each operation is mapped to a binary opcode (0000 to 1111).\n\n**2. RTL Design in Verilog:**\nThe ALU module is written using behavioral Verilog inside an always block. A case statement selects the appropriate operation based on the 4-bit opcode. The 8-bit operands A and B are passed as inputs, and the result is produced on a 9-bit output bus (8-bit result + carry out). Status flags (Zero, Carry, Overflow, Negative) are generated as 1-bit outputs.\n\n**3. Testbench Development:**\nA comprehensive Verilog testbench instantiates the ALU module and applies all 16 operation codes with multiple input combinations including boundary cases (0x00, 0xFF, 0x7F, 0x80). Simulation is run in ModelSim or Xilinx Vivado Simulator.\n\n**4. Simulation & Waveform Verification:**\nOutput waveforms are analyzed to verify correct operation, flag generation, and timing. The carry output for addition/subtraction is verified. Overflow detection for signed arithmetic is confirmed.\n\n**5. Synthesis & FPGA Implementation:**\nThe RTL is synthesized using Xilinx Vivado targeting a Basys3 or Nexys4 DDR board. The synthesis report is analyzed for LUT utilization, flip-flop count, and critical path delay. Timing constraints are applied and confirmed via the timing summary report.",
+        software: [
+            "Xilinx Vivado Design Suite (synthesis & implementation)",
+            "ModelSim or Questa for simulation",
+            "Verilog HDL for RTL design",
+            "GTKWave for waveform viewing",
+            "VS Code / Notepad++ for code editing"
+        ],
+        hardware: [
+            "Xilinx Basys3 or Nexys4 DDR FPGA board",
+            "USB A-to-B cable for FPGA programming",
+            "PC with 8GB RAM and Windows/Linux OS",
+            "Optional: Logic Analyzer for hardware verification"
+        ],
+        applications: "An 8-bit ALU is the building block of virtually every digital system. In CPU design, this ALU can be cascaded to build 16-bit or 32-bit processors. It forms the computational core of microcontrollers used in embedded systems like medical devices, automotive ECUs, and industrial PLCs. In digital signal processing, ALUs perform real-time arithmetic on sampled signals. In FPGA-based hardware accelerators, specialized ALUs perform single-cycle mathematical operations for machine learning inference or image processing. In educational settings, this project gives students hands-on experience with hardware description languages, simulation tools, and FPGA deployment workflows — skills directly applicable in semiconductor companies like Qualcomm, Intel, Texas Instruments, and ARM.",
+        conclusion: "The 8-bit ALU project is a cornerstone of digital design education and VLSI engineering. It bridges the gap between theoretical Boolean algebra and practical hardware implementation, demonstrating how complex operations are realized through elegant logical circuits. By completing this project, engineers gain invaluable experience with Verilog HDL, FPGA toolchains, and the critical path analysis that forms the basis of all modern processor design."
+    },
+    "vlsi-2": {
+        id: "vlsi-2",
+        category: "VLSI Design",
+        title: "VLSI - 2: UART Serial Communication Controller using VHDL",
+        intro: "Universal Asynchronous Receiver/Transmitter (UART) is one of the most widely used serial communication protocols in embedded and digital systems. This project implements a complete UART communication controller using VHDL, capable of full-duplex serial communication at configurable baud rates. The design includes both the transmitter and receiver modules with start/stop bit detection, parity checking, and baud rate generation. Verified on an FPGA board communicating with a PC terminal, this project demonstrates how hardware-level serial communication protocols are designed and validated, a fundamental skill for any VLSI or embedded systems engineer.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Full-duplex UART communication with configurable baud rates (9600 to 115200 bps).",
+            "Supports even, odd, and no parity modes for data integrity checking.",
+            "Hardware-level implementation with zero CPU overhead.",
+            "FIFO buffer integration prevents data loss during burst transmissions.",
+            "Verified on FPGA with real PC terminal communication using minicom/PuTTY.",
+            "Modular VHDL design with separate TX, RX, and baud-rate generator entities.",
+            "Includes complete testbench with self-checking assertions.",
+            "Low resource utilization — ideal for resource-constrained FPGA designs."
+        ],
+        methodology: "The UART controller is implemented using a hierarchical VHDL design approach.\n\n**1. Baud Rate Generator:**\nA programmable counter divides the system clock (50 MHz) to produce the required baud clock. For 9600 bps: divisor = 50,000,000 / 9600 = 5208.\n\n**2. UART Transmitter (TX) FSM:**\nThe transmitter uses a Finite State Machine with states: IDLE, START, DATA, PARITY, STOP. In IDLE, the TX line is held HIGH. On a send trigger, it transmits the START bit (LOW), then 8 data bits LSB first, optional parity, and STOP bit (HIGH).\n\n**3. UART Receiver (RX) FSM:**\nThe receiver monitors the RX line for a falling edge (start bit detection). It then samples the line at the center of each bit period using the baud clock. Data bits are shifted into a shift register LSB first, followed by parity and stop bit verification.\n\n**4. Simulation & Verification:**\nA self-checking VHDL testbench transmits known byte sequences and verifies received data matches. Parity error and framing error flags are tested with deliberately corrupted inputs.\n\n**5. FPGA Deployment:**\nThe synthesized design is mapped to FPGA I/O pins connected to a USB-to-UART bridge. A PC terminal (PuTTY) verifies bidirectional communication.",
+        software: [
+            "Xilinx Vivado or Intel Quartus Prime",
+            "VHDL for RTL design",
+            "ModelSim for simulation",
+            "PuTTY or minicom for terminal testing",
+            "GTKWave for waveform analysis"
+        ],
+        hardware: [
+            "Xilinx Basys3 / Nexys4 or Intel DE10-Lite FPGA",
+            "USB-to-UART bridge (CP2102 or FT232)",
+            "Logic Analyzer (optional for signal debugging)",
+            "PC with USB port"
+        ],
+        applications: "UART is embedded in virtually every microcontroller and SoC. It is used for GPS module interfacing in navigation systems, Bluetooth module communication in IoT devices, debug console output in embedded Linux, sensor data acquisition in industrial equipment, and inter-processor communication in multi-core embedded designs. Custom UART IP cores are designed for ASICs in satellite communication systems and medical devices where off-the-shelf solutions must be replaced with radiation-hardened or ultra-low-power alternatives.",
+        conclusion: "The UART controller project is an essential study in digital communication protocol implementation. It develops proficiency in VHDL, FSM design, and FPGA-based protocol verification — skills directly valued in semiconductor and embedded systems roles at companies designing communication ICs, SoCs, and custom hardware accelerators."
+    },
+    "vlsi-3": {
+        id: "vlsi-3",
+        category: "VLSI Design",
+        title: "VLSI - 3: Low Power D Flip-Flop Design using CMOS Technology",
+        intro: "Power consumption is the most critical constraint in modern VLSI chip design, particularly for mobile and IoT devices where battery life dictates product viability. This project focuses on the transistor-level design and analysis of a low-power D Flip-Flop using CMOS technology. By exploring techniques such as clock gating, transmission gate logic, and dual-edge triggering, the project compares conventional CMOS flip-flop topologies against low-power alternatives. Simulated using SPICE with standard library cells, this project provides deep insight into the relationship between transistor sizing, switching activity, and dynamic power dissipation at the cell level.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Achieves 40-60% power reduction compared to standard CMOS D flip-flop.",
+            "Transistor-level design provides understanding of CMOS gate operation.",
+            "Explores multiple low-power topologies: transmission gate, C2MOS, TSPC.",
+            "SPICE simulation provides accurate power, delay, and area analysis.",
+            "Demonstrates the power-delay-area tradeoff in VLSI cell design.",
+            "Setup time, hold time, and clock-to-Q delay characterization included.",
+            "Applicable techniques directly used in industry cell library design.",
+            "Introduces clock gating as a system-level power optimization strategy."
+        ],
+        methodology: "The low-power D flip-flop design employs a bottom-up transistor-level approach using CMOS technology.\n\n**1. Baseline Design (Standard CMOS Master-Slave FF):**\nFirst, a conventional master-slave D flip-flop is designed using CMOS transmission gates. The master latch captures data on the clock LOW phase, and the slave propagates the value to the output on clock HIGH. This serves as the power consumption baseline.\n\n**2. Low-Power Alternatives:**\n- **True Single-Phase Clock (TSPC):** Eliminates one clock phase, reducing clock load and switching power by ~35%.\n- **C2MOS (Clock CMOS):** Uses clocked CMOS gates to eliminate glitches.\n- **Semi-Dynamic FF:** Reduces internal node switching activity.\n\n**3. SPICE Simulation:**\nAll topologies are simulated in SPICE (Cadence Spectre or LTSpice) using TSMC 180nm or 90nm process models. Dynamic power (P = α × C × V² × f), leakage current, and propagation delay are measured.\n\n**4. Comparative Analysis:**\nA comparison table of Power-Delay Product (PDP) is generated for all topologies to identify the optimal design for a given frequency and VDD.",
+        software: [
+            "Cadence Virtuoso for schematic and layout",
+            "Spectre or HSPICE for circuit simulation",
+            "LTSpice (free alternative)",
+            "TSMC or GPDK 180nm/90nm process PDK",
+            "Synopsys Design Compiler (for synthesis)"
+        ],
+        hardware: [
+            "High-performance workstation (16GB RAM)",
+            "EDA license server (Cadence/Synopsys)",
+            "Optional: FPGA for functional verification at RTL level"
+        ],
+        applications: "Low-power flip-flop designs are used throughout the semiconductor industry in mobile SoC design (Snapdragon, Apple A-series), wearable devices, implantable medical electronics, IoT sensor nodes requiring year-long battery operation, and space systems requiring radiation-tolerant low-power logic. Every standard cell library in a chip design flow contains multiple variants of flip-flops optimized for speed, power, or area, and this project mirrors exactly that industrial design process.",
+        conclusion: "This project delivers mastery over transistor-level CMOS design — the bedrock of IC engineering. Understanding how power is consumed at the cell level equips engineers to make better architectural decisions at higher levels of abstraction, a skill that distinguishes top VLSI engineers in semiconductor companies worldwide."
+    },
+    "vlsi-4": {
+        id: "vlsi-4",
+        category: "VLSI Design",
+        title: "VLSI - 4: 4-bit Ripple Carry Adder using Verilog",
+        intro: "Binary addition is the most fundamental operation in digital computing. This project implements and analyzes a 4-bit Ripple Carry Adder (RCA) using Verilog HDL, built from individual Full Adder modules. The project explores how carry propagates through cascaded adder stages, causes ripple delay, and ultimately limits operating frequency. Compared against a Carry Look-Ahead Adder (CLA), this project provides a practical understanding of the speed-area tradeoff in arithmetic circuit design. Complete with FPGA synthesis and timing analysis, it is the ideal entry point into combinational VLSI circuit design.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Builds hierarchical Verilog design skills with module instantiation.",
+            "Demonstrates carry propagation delay and its impact on circuit speed.",
+            "Provides comparative analysis with Carry Look-Ahead Adder architecture.",
+            "Simple gate structure makes it ideal for gate-level timing analysis.",
+            "Includes overflow detection for signed binary arithmetic.",
+            "Synthesized and verified on FPGA with real-time display on 7-segment.",
+            "Forms the basis for multiplier and ALU design projects.",
+            "Excellent introduction to hierarchical RTL design methodology."
+        ],
+        methodology: "The 4-bit RCA is built using a structural Verilog approach with hierarchical module instantiation.\n\n**1. Full Adder Module:**\nA Full Adder (FA) module is first designed with inputs A, B, Cin and outputs Sum, Cout using either boolean equations (Sum = A ^ B ^ Cin; Cout = (A&B)|(B&Cin)|(A&Cin)) or behavioral Verilog.\n\n**2. Ripple Carry Adder Assembly:**\nFour FA instances are chained: the Cout of FA0 is connected to the Cin of FA1, and so on. The final carry out is the overflow indicator.\n\n**3. Testbench & Simulation:**\nAll 256 input combinations (0+0 to 15+15) are tested. Carry propagation delay is measured in the timing simulation.\n\n**4. FPGA Implementation:**\nSynthesized on Basys3. Inputs via DIP switches, result displayed on 7-segment display via BCD decoder.\n\n**5. Comparison with CLA:**\nA 4-bit CLA is also implemented, and critical path delay is compared to demonstrate the speed advantage of parallel carry computation.",
+        software: [
+            "Xilinx Vivado or Cadence Genus",
+            "Verilog HDL",
+            "ModelSim for simulation",
+            "GTKWave for waveform viewing"
+        ],
+        hardware: [
+            "Xilinx Basys3 FPGA board",
+            "DIP switches and 7-segment display (on-board)",
+            "PC with USB"
+        ],
+        applications: "Ripple carry adders are used in low-power embedded processors, digital signal processing units, graphics hardware, and cryptographic engines. They are the elementary building blocks scaled into 32-bit and 64-bit adders found in every modern CPU and GPU. Understanding RCA behavior is essential to designing high-frequency deep pipeline arithmetic units used in AI accelerators and scientific computing hardware.",
+        conclusion: "The Ripple Carry Adder project establishes the foundations of arithmetic circuit design. It provides hands-on experience with structural Verilog, timing analysis, and FPGA deployment, while clearly demonstrating why carry propagation is the central challenge in high-speed digital arithmetic — a concept that resonates throughout all of modern computer architecture."
+    },
+    "vlsi-5": {
+        id: "vlsi-5",
+        category: "VLSI Design",
+        title: "VLSI - 5: RISC Processor Core Design using Verilog HDL",
+        intro: "Designing a processor from scratch is the ultimate challenge in digital VLSI design. This project implements a simplified 16-bit RISC (Reduced Instruction Set Computer) processor core using Verilog HDL. The processor supports a custom instruction set with 16 instructions including arithmetic, logic, load/store, and branch operations. It features a 5-stage pipeline (Fetch, Decode, Execute, Memory, Writeback), a register file with 8 general-purpose registers, and a Harvard architecture with separate instruction and data memories. This full-system design project integrates every VLSI concept from ALU design to memory interfacing to hazard detection, making it the pinnacle of digital design coursework.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "End-to-end processor design covering all 5 pipeline stages.",
+            "Custom 16-bit ISA with 16 instructions including branches and loads/stores.",
+            "Implements data forwarding and pipeline stall for hazard resolution.",
+            "Harvard architecture with separate program and data memory.",
+            "Register file with 8 x 16-bit general-purpose registers.",
+            "Fully simulated with assembly program execution verification.",
+            "Provides foundation for understanding ARM, RISC-V, and MIPS architectures.",
+            "Demonstrates the complete hardware-software interface at ISA level."
+        ],
+        methodology: "The RISC processor is designed using a modular RTL approach in Verilog, with each pipeline stage as a separate module.\n\n**1. Instruction Set Architecture (ISA) Definition:**\nA 16-bit ISA is designed with R-type (register), I-type (immediate), and B-type (branch) instruction formats. 16 instructions are defined: ADD, SUB, AND, OR, XOR, LDR, STR, MOV, CMP, BEQ, BNE, BLT, BGT, NOP, PUSH, POP.\n\n**2. Datapath Design:**\n- IF Stage: Program Counter, Instruction Memory\n- ID Stage: Register File, Instruction Decoder\n- EX Stage: ALU, Forwarding Unit\n- MEM Stage: Data Memory\n- WB Stage: Writeback MUX\n\n**3. Pipeline Registers:**\nIF/ID, ID/EX, EX/MEM, MEM/WB pipeline registers are implemented as D flip-flop banks to hold intermediate values across stages.\n\n**4. Hazard Detection:**\nData hazards are resolved through forwarding (bypass paths from EX-MEM and MEM-WB to the EX stage). Load-use hazards insert a pipeline bubble (NOP) via stall logic.\n\n**5. Verification:**\nAssembly programs (bubble sort, factorial, Fibonacci) are hand-assembled and loaded into instruction memory. Simulation output is verified against expected register values.",
+        software: [
+            "Xilinx Vivado for synthesis and implementation",
+            "ModelSim / Questa for RTL simulation",
+            "Verilog HDL",
+            "Custom Python assembler for ISA",
+            "GTKWave for pipeline waveform analysis"
+        ],
+        hardware: [
+            "Xilinx Nexys4 DDR FPGA board",
+            "PC with 16GB RAM",
+            "USB JTAG programmer",
+            "Optional: Logic Analyzer for pipeline debug"
+        ],
+        applications: "Custom processor cores designed in this manner find applications in embedded controllers for automotive safety systems (ISO 26262 certified processors), space-grade processors for satellite computers, domain-specific accelerators for AI inference, and ASIC-based encryption engines. Companies like ARM, RISC-V International, MIPS Technologies, and Imagination Technologies are built on the science of processor microarchitecture explored in this project.",
+        conclusion: "Designing a RISC processor is the definitive achievement in digital VLSI coursework. This project synthesizes every aspect of computer organization and VLSI design into a single, cohesive system, fully demonstrating the hardware-software interface. Engineers completing this project have a profound understanding of how instructions execute in hardware — knowledge that is the foundation of careers in processor design, compiler development, and computer architecture."
+    },
+    "vlsi-6": {
+        id: "vlsi-6",
+        category: "VLSI Design",
+        title: "VLSI - 6: Digital Clock Design using FPGA and Verilog",
+        intro: "A digital clock is one of the most practical and satisfying FPGA projects, combining multiple VLSI design concepts into a real-world, visible product. This project implements a fully functional HH:MM:SS digital clock on an FPGA board using Verilog HDL. It includes a crystal oscillator-driven baud clock counter, BCD counter cascades for seconds, minutes, and hours, a 7-segment display multiplexer, and pushbutton controls for time setting. Beyond its utility, this project teaches clock divider design, finite state machines, 7-segment decoding, and multiplexed display driving — a comprehensive toolkit for any FPGA developer.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Practical real-world project with visible output on 7-segment display.",
+            "Demonstrates clock divider design from 100 MHz to 1 Hz.",
+            "Implements BCD counter cascade for HH:MM:SS timekeeping.",
+            "Multiplexed display driving saves I/O pins while driving 6 display digits.",
+            "Pushbutton debouncing and input synchronization are implemented.",
+            "AM/PM mode and 24-hour mode switchable via slide switch.",
+            "Optional alarm functionality with buzzer output.",
+            "Demonstrates resource-efficient design within FPGA fabric."
+        ],
+        methodology: "The digital clock is designed with a hierarchical modular structure.\n\n**1. Clock Divider:**\nA 27-bit counter divides the 100 MHz FPGA clock down to 1 Hz (100,000,000 count) for the seconds pulse. An intermediate 1 kHz signal is generated for display multiplexing.\n\n**2. BCD Counter Cascade:**\nSeparate BCD counters handle seconds (0-59), minutes (0-59), and hours (0-23 or 1-12). Each counter increments the next on rollover using a 'carry' pulse.\n\n**3. Display Controller:**\nA 3-bit rotating selector cycles through 6 digit positions at 1 kHz. The corresponding BCD digit is decoded to a 7-segment pattern (using a 16-entry LUT) and driven to the shared 7-segment bus while the appropriate common cathode is activated.\n\n**4. Button Debouncer:**\nA 20ms debounce filter using a synchronizer + counter prevents multiple increments from a single button press.\n\n**5. Alarm Module:**\nStored alarm time is compared to current time. On match, a buzzer GPIO is toggled to generate an audible alarm.",
+        software: [
+            "Xilinx Vivado Design Suite",
+            "Verilog HDL",
+            "ModelSim for functional simulation"
+        ],
+        hardware: [
+            "Xilinx Basys3 FPGA (4 x 7-segment digits) or Nexys4 (8 digits)",
+            "On-board pushbuttons and slide switches",
+            "Optional: External buzzer for alarm output"
+        ],
+        applications: "Digital clock designs are embedded in microwave ovens, alarm clocks, industrial timer modules, automotive dashboards, and public display systems. The clock divider and BCD counter techniques used here are also applied in real-time clock (RTC) IC design, FPGA-based test & measurement equipment timer functions, and precision timing circuits in communication systems where accurate frequency division is essential.",
+        conclusion: "The FPGA digital clock project is a perfect synthesis of theoretical VLSI concepts and practical implementation skills. It teaches clock management, display interfacing, and user input handling — three pillars of virtually every FPGA-based product. Engineers who complete this project are well-prepared to tackle real industrial FPGA firmware development."
+    },
+    "vlsi-7": {
+        id: "vlsi-7",
+        category: "VLSI Design",
+        title: "VLSI - 7: AES Encryption Engine on FPGA",
+        intro: "Data security is a critical requirement of the digital age, and hardware-accelerated cryptography is far faster and more power-efficient than software encryption. This project implements the Advanced Encryption Standard (AES-128) encryption engine on an FPGA using Verilog HDL. The design executes all 10 rounds of AES including SubBytes, ShiftRows, MixColumns, and AddRoundKey operations in a pipelined architecture, achieving throughput several orders of magnitude greater than software AES. This project combines knowledge of cryptographic algorithms, finite field arithmetic in GF(2^8), and high-performance FPGA design techniques.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Hardware AES achieves 10-100x faster throughput than software implementations.",
+            "Pipelined architecture enables new block encryption every clock cycle.",
+            "Implements all 4 AES transformations: SubBytes, ShiftRows, MixColumns, AddRoundKey.",
+            "S-Box implemented as look-up table for maximum speed.",
+            "Supports both encryption and optional decryption modes.",
+            "Verified against NIST AES test vectors for correctness.",
+            "Power-efficient operation compared to CPU-based cryptographic processing.",
+            "Foundation for hardware security modules (HSM) and secure communication systems."
+        ],
+        methodology: "AES-128 operates on a 4x4 matrix (state) of bytes using a 128-bit key over 10 rounds. The hardware implementation follows these stages:\n\n**1. Key Expansion:**\nThe 128-bit initial key is expanded into 11 round keys (1408 bits total) using the AES key schedule. This is implemented as a combinational circuit with S-Box lookups and XOR operations.\n\n**2. SubBytes Stage:**\nEach byte of the state is substituted using a 256-entry S-Box LUT stored in FPGA block RAM. The S-Box values are pre-computed based on multiplicative inverse in GF(2^8).\n\n**3. ShiftRows Stage:**\nA cyclic byte shift of rows 1, 2, and 3 by 1, 2, and 3 positions respectively is implemented as pure wiring rearrangement (zero logic cost).\n\n**4. MixColumns Stage:**\nMatrix multiplication in GF(2^8) using the AES MixColumns matrix. Implemented using XOR and xtime (multiplication by 2 in GF) operations.\n\n**5. Pipelined Architecture:**\nAll 10 rounds are unrolled and pipelined with registers between stages. The design encrypts a new 128-bit block every clock cycle at full pipeline depth.",
+        software: [
+            "Xilinx Vivado for synthesis",
+            "Verilog HDL",
+            "Python for test vector generation",
+            "ModelSim for simulation",
+            "NIST AES validation tools"
+        ],
+        hardware: [
+            "Xilinx Artix-7 or Kintex-7 FPGA (for higher performance)",
+            "Xilinx Basys3 for basic implementation",
+            "PC with 16GB RAM for synthesis"
+        ],
+        applications: "Hardware AES engines are deployed in secure communication chips for 5G base stations, VPN hardware accelerators, full-disk encryption controllers (SSD security), payment terminals (PCI-DSS compliance), secure boot ICs for IoT devices, and military-grade encrypted communication systems. Every modern SoC (Snapdragon, Apple A-series, Cortex-A class processors) contains hardware AES acceleration engines designed using principles directly from this project.",
+        conclusion: "The AES FPGA implementation project represents the intersection of cryptography, computer arithmetic, and high-performance digital design. It is highly valued in semiconductor security, telecommunications, and defense electronics industries. Engineers with hardware cryptography skills are among the most sought-after in the chip design industry globally."
+    },
+    "vlsi-8": {
+        id: "vlsi-8",
+        category: "VLSI Design",
+        title: "VLSI - 8: Traffic Light Controller using Finite State Machine",
+        intro: "Finite State Machines (FSMs) are the backbone of digital control systems, governing everything from vending machines to communication protocols. This project implements a 4-way traffic light controller using a Moore FSM in Verilog HDL. The controller manages signal timings for a 4-road intersection with pedestrian crossing support, emergency vehicle preemption, and night-mode blinking. Deployed on an FPGA with LED outputs, this real-world application demonstrates the power of FSM-based design methodology and teaches systematic state diagram translation to synthesizable Verilog code.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Demonstrates complete FSM design flow from state diagram to FPGA.",
+            "Implements 4-way intersection with pedestrian crossing support.",
+            "Emergency vehicle preemption clears the intersection in any state.",
+            "Night-mode blinking yellow reduces power consumption during low-traffic hours.",
+            "Configurable timing parameters through Verilog parameters.",
+            "One-hot and binary FSM encoding compared for speed vs. area.",
+            "Visual verification on FPGA with color-coded LEDs.",
+            "Foundation for understanding control unit design in processors."
+        ],
+        methodology: "The traffic light FSM design follows a systematic 6-step FSM design methodology.\n\n**1. State Identification:**\n8 states are defined: NS_GREEN, NS_YELLOW, EW_GREEN, EW_YELLOW (for vehicles), PEDESTRIAN_NS, PEDESTRIAN_EW, EMERGENCY, NIGHT_BLINK.\n\n**2. State Transition Diagram:**\nTransitions are defined based on timer expiry, pedestrian button press, emergency sensor, and time-of-day signals. A clean state transition diagram is drawn.\n\n**3. State Encoding:**\nBoth binary (3-bit) and one-hot (8-bit) encoding are implemented and compared for timing closure.\n\n**4. Verilog RTL Implementation:**\nThree always blocks: sequential state register, next-state combinational logic, and output combinational logic (Moore machine).\n\n**5. Timer Implementation:**\nA parameterized countdown timer generates state transition pulses after configurable delays (Green: 30s, Yellow: 5s).\n\n**6. Testbench Verification:**\nFull state traversal is simulated including emergency preemption and pedestrian request sequences.",
+        software: [
+            "Xilinx Vivado",
+            "Verilog HDL",
+            "ModelSim for FSM simulation",
+            "GTKWave for state waveform viewing"
+        ],
+        hardware: [
+            "Xilinx Basys3 FPGA board",
+            "On-board LEDs (RGB or standard)",
+            "Pushbuttons for pedestrian and emergency inputs"
+        ],
+        applications: "FSM-based controllers are used in traffic management systems, vending machines, elevator controllers, communication protocol controllers (I2C, SPI, USB), CPU control units, and industrial automation PLCs. Understanding FSM design is essential for hardware designers working on any sequential digital system, from consumer electronics to safety-critical automotive and aerospace control systems.",
+        conclusion: "The traffic light FSM project is an ideal bridge between theoretical FSM concepts and real-world FPGA implementation. It demonstrates disciplined hardware design methodology, configurable RTL coding, and practical FPGA deployment skills that are directly transferable to professional digital hardware engineering."
+    },
+    "vlsi-9": {
+        id: "vlsi-9",
+        category: "VLSI Design",
+        title: "VLSI - 9: FIR Filter Design using Verilog for Signal Processing",
+        intro: "Digital filters are indispensable in telecommunications, audio processing, and instrumentation systems. This project implements a configurable N-tap Finite Impulse Response (FIR) filter in Verilog HDL using the direct-form structure with fixed-point arithmetic. The filter coefficients are designed using MATLAB's Filter Design Toolbox for a low-pass frequency response, then quantized and implemented on FPGA. The design demonstrates the core of hardware DSP: multiply-accumulate (MAC) operations, pipelined arithmetic, and coefficient ROM implementation — skills at the heart of wireless communication and audio processing chip design.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Implements configurable N-tap FIR filter (16-tap demonstrated) in hardware.",
+            "Fixed-point arithmetic with configurable coefficient wordlength.",
+            "Pipelined MAC architecture achieves 1-sample-per-clock throughput.",
+            "Coefficient ROM implemented in FPGA block RAM for efficiency.",
+            "Filter response verified against MATLAB floating-point reference.",
+            "Symmetric coefficient optimization halves the number of multipliers.",
+            "Linear phase response preserved through symmetric coefficient design.",
+            "Demonstrates hardware DSP techniques used in wireless communication ICs."
+        ],
+        methodology: "The FIR filter hardware implementation follows a co-design approach combining MATLAB for filter design and Verilog for hardware implementation.\n\n**1. Filter Specification & Coefficient Design (MATLAB):**\nUsing MATLAB's fdatool or designfilt, a 16-tap low-pass FIR filter is designed with cutoff frequency of 0.25 * Fs. Hanning window is applied. Floating-point coefficients are quantized to 12-bit signed fixed-point representation.\n\n**2. Hardware Architecture:**\nA systolic array structure is used with 16 delay registers (D flip-flops), 16 multipliers (coefficient x sample), and an adder tree to sum all products. The output accumulator is 24-bit to prevent overflow.\n\n**3. Coefficient ROM:**\nThe 16 quantized coefficients are stored in a 16-entry x 12-bit ROM implemented in FPGA LUTs or Block RAM.\n\n**4. Pipelining:**\nRegister stages are inserted between the multiplier outputs and the adder tree to achieve timing closure at the target clock frequency.\n\n**5. Verification:**\nA Verilog testbench applies a 1 kHz sinusoid above the cutoff to verify attenuation, and a 100 Hz sinusoid below cutoff to verify pass-through. Results are compared to MATLAB reference.",
+        software: [
+            "MATLAB with Signal Processing Toolbox for filter design",
+            "Xilinx Vivado for synthesis",
+            "Verilog HDL",
+            "ModelSim for simulation"
+        ],
+        hardware: [
+            "Xilinx Basys3 or Arty A7 FPGA",
+            "Optional: ADC/DAC Pmod for real signal input/output testing"
+        ],
+        applications: "Hardware FIR filters are deployed in software-defined radio (SDR) receiver ICs, 5G baseband processor chips, digital audio processing ASICs, SONAR and RADAR signal processing systems, ECG and medical signal conditioning ASICs, and industrial vibration analysis instruments. Every semiconductor company working on wireless communications, audio, or instrumentation uses FIR filter IP cores designed on these fundamental principles.",
+        conclusion: "The FIR filter FPGA project represents the convergence of digital signal processing theory and VLSI implementation — two pillars of modern chip design. Engineers who master this project are equipped for careers in RF IC design, wireless communication chipsets, audio SoC development, and DSP architecture, making it one of the most industry-relevant projects in the ECE curriculum."
+    },
+    "vlsi-10": {
+        id: "vlsi-10",
+        category: "VLSI Design",
+        title: "VLSI - 10: Memory Controller Design using VHDL",
+        intro: "Memory management is a critical function in every digital system, from microcontrollers to data center servers. This project implements a synchronous SRAM memory controller using VHDL that manages read and write operations with proper timing, handshaking, and wait state generation. The controller interfaces between a processor bus and an external SRAM chip, generating the required control signals (CS, WE, OE) with precise timing as specified in the memory datasheet. This project teaches memory interface timing, bus protocol design, and the critical importance of setup/hold time constraints in real hardware systems.",
+        image: "/images/electronicsprojects.webp",
+        advantages: [
+            "Implements complete SRAM read and write protocols with correct timing.",
+            "Configurable wait state generation for different memory speed grades.",
+            "Bus arbitration logic supports multiple bus masters.",
+            "Burst read mode implementation for higher effective bandwidth.",
+            "Error detection using parity bit for data integrity.",
+            "FPGA-verified by interfacing with actual IS61WV25616 SRAM chip.",
+            "Teaches memory datasheet interpretation and timing constraint setup.",
+            "Foundation for DDR3/DDR4 memory controller concepts."
+        ],
+        methodology: "The SRAM memory controller is designed in VHDL using an FSM-based approach to sequence memory operations.\n\n**1. Memory Interface Analysis:**\nThe SRAM datasheet (e.g., IS61WV25616BLL) is studied to understand timing parameters: address setup time (tAS), address hold time (tAH), write pulse width (tWP), output enable to valid data (tOE), cycle time (tRC).\n\n**2. FSM State Machine Design:**\nStates: IDLE, ADDR_SETUP, READ_ACCESS, READ_HOLD, WRITE_SETUP, WRITE_PULSE, WRITE_HOLD. Transitions are governed by a read/write request from the processor bus and timer counts corresponding to memory timing parameters at the system clock frequency.\n\n**3. Control Signal Generation:**\nWe(write enable), OE(output enable), and CS(chip select) signals are driven in each FSM state to match precise timing requirements from the datasheet.\n\n**4. Bus Interface:**\nThe controller presents a simple handshake interface to the processor: Address, DataIn, DataOut, ReadEnable, WriteEnable, Ready (stall signal). The processor waits when Ready is de-asserted.\n\n**5. FPGA Verification:**\nThe controller is synthesized on a Nexys4 DDR board. External SRAM is connected via Pmod connectors. A simple test program writes known patterns and reads them back, verifying data integrity on a logic analyzer.",
+        software: [
+            "Xilinx Vivado for synthesis and P&R",
+            "VHDL for RTL design",
+            "ModelSim for timing simulation",
+            "Logic analyzer software (Digilent Waveforms)"
+        ],
+        hardware: [
+            "Xilinx Nexys4 DDR FPGA board",
+            "External IS61WV25616 SRAM module (Pmod)",
+            "Digilent Digital Discovery or Saleae Logic Analyzer",
+            "PC with 16GB RAM"
+        ],
+        applications: "Memory controllers are one of the most performance-critical components in computing systems. They are custom-designed in CPUs (Intel, AMD), SoCs (Qualcomm, Apple), embedded controllers (STM32, NXP), and dedicated memory interface ASICs. The transition from SRAM controllers to DDR4/LPDDR5 controllers follows the same fundamental principles explored in this project, scaled to handle multiple banks, row/column addressing, refresh cycles, and training algorithms. Engineers who understand memory interface design are highly valued in chip design teams globally.",
+        conclusion: "The memory controller project provides a concrete, hardware-verified understanding of how processors communicate with memory — one of the most fundamental interactions in all of computing. By designing timing-critical control logic and verifying it against real hardware, engineers develop the precision and rigor required for professional VLSI and FPGA development roles in the semiconductor industry."
     }
 };
 
@@ -594,6 +913,7 @@ export const getProjectById = (id) => {
         'ds': 'Data Science',
         'dl': 'Deep Learning',
         'network': 'Networking',
+        'vlsi': 'VLSI Design',
         'latest': 'Latest Project',
         'research': 'Research Project'
     };
@@ -605,7 +925,8 @@ export const getProjectById = (id) => {
         'java': '/images/app.webp',
         'ml': '/images/healthcare_bot.webp',
         'android': '/images/app.webp',
-        'blockchain': '/images/block.webp'
+        'blockchain': '/images/block.webp',
+        'vlsi': '/images/electronicsprojects.webp'
     };
 
     const categoryName = categoryMap[catt] || catt.toUpperCase();
