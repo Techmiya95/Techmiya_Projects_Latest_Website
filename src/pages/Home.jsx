@@ -17,7 +17,7 @@ function Home() {
             <section className="page1" style={{ backgroundImage: "url('/images/collage.webp')" }}>
                 <div className="hero-overlay"></div>
                 <div className="text-box">
-                    <p className="hero-keywords"><strong>Expert Guidance for Final Year Projects, IEEE Projects, and Project for Students.</strong></p>
+                    <p className="hero-keywords"><strong>Expert Guidance for Final Year Projects & IEEE Projects</strong></p>
                     <h1>Techmiya Projects</h1>
                     <p className="hero-desc">Empowering the next generation of innovators where boundless creativity converges with cutting-edge technology.</p>
                 </div>

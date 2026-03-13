@@ -1,9 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      setIsDarkMode(false);
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.remove('light-mode');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    if (isDarkMode) {
+      document.body.classList.add('light-mode');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.body.classList.remove('light-mode');
+      localStorage.setItem('theme', 'dark');
+    }
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -109,6 +131,15 @@ function Header() {
               <li className="latest-link"><Link to="/software-projects/latest-ideas-2026">LATEST PROJECTS 2026</Link></li>
               <li><Link to="/about-us">ABOUT US</Link></li>
               <li><Link to="/contact-us">CONTACT US</Link></li>
+              <li className="theme-toggle" onClick={toggleTheme} style={{ cursor: 'pointer' }}>
+                <a style={{ display: 'inline-block', padding: '10px' }}>
+                  {isDarkMode ? (
+                    <i className="fa fa-sun-o" title="Switch to Light Mode" style={{ fontSize: '1.2rem' }}></i>
+                  ) : (
+                    <i className="fa fa-moon-o" title="Switch to Dark Mode" style={{ fontSize: '1.2rem' }}></i>
+                  )}
+                </a>
+              </li>
             </ul>
           </div>
           <i className="fa fa-bars open-icon" onClick={toggleMenu}></i>

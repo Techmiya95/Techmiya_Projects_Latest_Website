@@ -98,6 +98,7 @@ footer h3::before {
   transition: all 0.3s ease;
   display: block;
   padding: 5px 0;
+  text-align: left;
 }
 
 .footernav ul li a:hover {

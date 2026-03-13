@@ -10,28 +10,29 @@
    HERO SECTION - Full Width Banner
    ============================================ */
 .page1 {
-    min-height: calc(100vh - 170px);
+    min-height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll; /* Better for mobile performance */
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 140px; /* Accounts for fixed headers */
 }
 
 @media (max-width: 992px) {
     .page1 {
-        min-height: calc(100vh - 130px);
+        padding-top: 120px;
     }
 }
 
 @media (max-width: 768px) {
     .page1 {
-        min-height: calc(100vh - 85px);
+        padding-top: 100px;
     }
 }
 
@@ -360,6 +361,10 @@ nav a img {
 
 nav .fa {
     display: none;
+}
+
+nav .theme-toggle .fa {
+    display: inline-block;
 }
 
 /* ============================================
@@ -1334,4 +1339,231 @@ hr {
         width: 24px;
         height: 24px;
     }
+}
+
+/* ============================================
+   LIGHT MODE STYLES Override
+   ============================================ */
+body.light-mode {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+body.light-mode .page1,
+body.light-mode #feature,
+body.light-mode .testimonials,
+body.light-mode .video-testimonials,
+body.light-mode .shorts,
+body.light-mode .final,
+body.light-mode footer {
+    background: #ffffff;
+}
+
+body.light-mode .page1::before,
+body.light-mode .page1::after,
+body.light-mode .hero-overlay {
+    opacity: 0.1;
+    background: none;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode .welcome h2,
+body.light-mode .testimonials h1,
+body.light-mode .testimonials h2,
+body.light-mode .final h1,
+body.light-mode .course h1 {
+    color: #0f172a;
+    -webkit-text-fill-color: initial;
+    background: none;
+    text-shadow: none;
+}
+
+body.light-mode p,
+body.light-mode .text-box p,
+body.light-mode .testimonial-col p,
+body.light-mode .course p {
+    color: #334155;
+}
+
+body.light-mode .text-box h1 {
+    color: #0f172a;
+    -webkit-text-fill-color: #0f172a;
+    text-shadow: none;
+}
+
+body.light-mode .single-service,
+body.light-mode .testimonial-col,
+body.light-mode .row,
+body.light-mode .course-col,
+body.light-mode .box_2 {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .single-service:hover,
+body.light-mode .course-col:hover,
+body.light-mode .box_2:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .overlay {
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
+}
+
+body.light-mode .service-desc h3,
+body.light-mode .course-col h3,
+body.light-mode .box_2 h3 {
+    color: #0f172a;
+    text-shadow: none;
+}
+
+body.light-mode .nav-links ul li a,
+body.light-mode .branches-bar,
+body.light-mode .theme-toggle i {
+    color: #1e293b;
+}
+
+body.light-mode .sticky-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+body.light-mode ul li ul.dropdown {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 3px solid #0ea5e9;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode ul li ul.dropdown li a {
+    color: #334155;
+    border-left-color: transparent;
+}
+
+body.light-mode ul li ul.dropdown li a:hover {
+    background: rgba(14, 165, 233, 0.05);
+    color: #0ea5e9;
+    border-left-color: #0ea5e9;
+}
+
+body.light-mode .bottom-announcement-bar {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .announcement-content span,
+body.light-mode .announcement-content i {
+    color: #0f172a;
+    text-shadow: none;
+}
+
+body.light-mode .enroll-modal {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+body.light-mode .enroll-modal h2,
+body.light-mode .form-group label {
+    color: #0f172a;
+    -webkit-text-fill-color: initial;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+}
+
+body.light-mode .close-modal {
+    color: #64748b;
+}
+
+/* Footer Light Mode Overrides */
+body.light-mode footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+body.light-mode footer::before {
+    background: linear-gradient(90deg, transparent, #0ea5e9, transparent);
+}
+
+body.light-mode footer h3,
+body.light-mode .footer-content h3 {
+    color: #0f172a;
+    -webkit-text-fill-color: initial;
+    text-shadow: none;
+}
+
+body.light-mode footer h3::before {
+    background: #0ea5e9;
+    box-shadow: none;
+}
+
+body.light-mode .footer-content p,
+body.light-mode .add p {
+    color: #475569;
+}
+
+body.light-mode .add p strong {
+    color: #0ea5e9;
+}
+
+body.light-mode .footernav ul li a {
+    color: #475569;
+}
+
+body.light-mode .footernav ul li a:hover {
+    color: #0ea5e9;
+}
+
+body.light-mode .socialIcons a {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0ea5e9;
+}
+
+body.light-mode .socialIcons a:hover {
+    background: #0ea5e9;
+    border-color: #0ea5e9;
+    color: #ffffff;
+}
+
+body.light-mode .payments img {
+    filter: grayscale(1) opacity(0.6);
+}
+
+body.light-mode .payments a:hover img {
+    filter: none;
+    opacity: 1;
+}
+
+body.light-mode .add {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+body.light-mode header nav>a img,
+body.light-mode .slogan img {
+    content: url('/images/logo-light.png');
+    filter: none;
+    opacity: 1;
+}
+
+body.light-mode .footerBottom {
+    background: #e2e8f0;
+    border-top: 1px solid #cbd5e1;
+}
+
+body.light-mode .footerBottom p {
+    color: #475569;
+}
+
+body.light-mode .designer {
+    color: #0ea5e9;
 }

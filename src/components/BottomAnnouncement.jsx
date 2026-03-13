@@ -28,8 +28,15 @@ function BottomAnnouncement() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form Submitted:', formData);
-        alert('Thank you for your interest! We will contact you soon.');
+
+        // Construct WhatsApp Message
+        const phoneNumber = "917338631971";
+        const message = `Hello Techmiya,\n\nI am interested in starting a project.\n\n*Name:* ${formData.name}\n*Contact:* ${formData.contact}\n*Project Idea:* ${formData.projectIdea || 'Not specified'}`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        // Open WhatsApp in new tab
+        window.open(whatsappUrl, '_blank');
+
         setIsModalOpen(false);
         setFormData({ name: '', contact: '', projectIdea: '' });
     };

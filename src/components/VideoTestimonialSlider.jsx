@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 
 const DEFAULT_REVIEWS = [
     { id: 'v1', videoId: 'ttej9TVU9WM' },
-    { id: 'v2', videoId: '13GYx-siWeY' },
     { id: 'v3', videoId: 'S7cmcCuEH5w' },
 ];
 
