@@ -588,6 +588,7 @@ nav .fa {
         padding: 10px 0;
         margin: 8px 0 0 0 !important;
         display: none;
+        column-count: 1 !important;
     }
 
     ul li ul.dropdown::before {
@@ -669,7 +670,7 @@ nav .fa {
         top: 60px;
         height: calc(100vh - 60px);
         width: 260px;
-        right: -260px;
+        right: 0;
         padding: 15px 12px;
     }
 
@@ -683,5 +684,24 @@ nav .fa {
         width: 36px;
         height: 36px;
         padding: 6px;
+    }
+}
+
+/* ===== MENU OVERLAY BACKDROP ===== */
+.menu-overlay {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+        z-index: 998;
     }
 }

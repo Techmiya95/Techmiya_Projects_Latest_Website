@@ -268,8 +268,11 @@
 
     .main-content {
         flex: 1;
-        padding: 25px;
+        padding: 20px 15px;
         border-radius: 15px;
+        overflow-x: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .sidebar {
@@ -292,5 +295,80 @@
     .main-content ol li {
         font-size: 0.95rem;
         padding: 12px 15px 12px 50px;
+    }
+
+    .main-content ol li.project-item a {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px 15px 15px 50px;
+    }
+
+    .view-detail-btn {
+        align-self: flex-start;
+    }
+
+    /* Project Detail Page Mobile Fixes */
+    .project-detail-page {
+        padding: 15px 0;
+    }
+
+    .project-detail-content {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .project-detail-content h3 {
+        font-size: 1.25rem;
+        margin: 25px 0 15px;
+    }
+
+    .project-detail-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .project-image-showcase {
+        border-radius: 12px;
+        margin: 20px 0;
+    }
+
+    .brand-badge {
+        top: 10px;
+        right: 10px;
+        padding: 6px;
+    }
+
+    .brand-badge img {
+        height: 25px;
+    }
+
+    /* Fix advantages section text clipping */
+    .project-advantages-section ul li {
+        padding: 12px 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .project-advantages-section ul li i {
+        flex-shrink: 0;
+        margin-top: 3px;
+    }
+
+    .project-conclusion-section p {
+        padding: 18px;
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+        margin-top: 25px;
     }
 }

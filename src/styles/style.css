@@ -1224,39 +1224,39 @@ hr {
     .instagram-container,
     .linkedin-container,
     .youtube-container {
-        right: 12px;
+        right: 8px;
     }
 
     .whatsapp-container {
-        bottom: 20px;
+        bottom: 15px;
     }
 
     .instagram-container {
-        bottom: 85px;
+        bottom: 65px;
     }
 
     .linkedin-container {
-        bottom: 150px;
+        bottom: 115px;
     }
 
     .youtube-container {
-        bottom: 215px;
+        bottom: 165px;
     }
 
     .whatsapp-button,
     .instagram-button,
     .linkedin-button,
     .youtube-button {
-        width: 50px;
-        height: 50px;
+        width: 36px;
+        height: 36px;
     }
 
     .whatsapp-button img,
     .instagram-button img,
     .linkedin-button img,
     .youtube-button img {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -1324,20 +1324,43 @@ hr {
     }
 
     /* Smaller social buttons on very small screens */
+    .whatsapp-container,
+    .instagram-container,
+    .linkedin-container,
+    .youtube-container {
+        right: 5px;
+    }
+
+    .whatsapp-container {
+        bottom: 12px;
+    }
+
+    .instagram-container {
+        bottom: 55px;
+    }
+
+    .linkedin-container {
+        bottom: 98px;
+    }
+
+    .youtube-container {
+        bottom: 141px;
+    }
+
     .whatsapp-button,
     .instagram-button,
     .linkedin-button,
     .youtube-button {
-        width: 45px;
-        height: 45px;
+        width: 32px;
+        height: 32px;
     }
 
     .whatsapp-button img,
     .instagram-button img,
     .linkedin-button img,
     .youtube-button img {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
     }
 }
 
